@@ -43,9 +43,11 @@
 <p>
   <a href="https://github.com/Emilio-Araya"><img alt="Python" src="https://img.shields.io/badge/Python%20-%2314354C.svg?logo=python&logoColor=white"></a>
   <a href="https://github.com/Emilio-Araya"><img alt="Java" src="https://img.shields.io/badge/Java%20-%23F7DF1E.svg?logo=java&logoColor=black"></a>
-  <a href="https://github.com/Emilio-Araya"><img alt="CSS" src="https://img.shields.io/badge/CSS%20-%2314354C.svg?logo=css&logoColor=white"></a>
+  <a href="https://github.com/Emilio-Araya"><img alt="CSS" src="https://img.shields.io/badge/CSS%20-%2314354C.svg?logo=css&logoColor=white"></a>   
   <a href="https://github.com/Emilio-Araya"><img alt="HTML" src="https://img.shields.io/badge/HTML%20-%2314354C.svg?logo=html&logoColor=white"></a>
+  <a href="https://github.com/Emilio-Araya"><img alt="SQL" src="https://img.shields.io/badge/SQL%20-%23457F5A.svg?logo=postgresql&logoColor=white"></a>
 </p>
+
 
 ### 💻 Software and Tools
 
