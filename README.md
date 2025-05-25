@@ -34,14 +34,7 @@ Incluye:
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
-## 📫 Contacto
 
-- Email: `emilio.araya@example.com` *(reemplaza con tu email real)*
-
-
----
-
-*Gracias por visitar mi perfil. Siempre estoy abierto a colaborar o aprender algo nuevo. ¡Nos leemos! 🚀*
 
 <!--
 **emilio-araya/Emilio-Araya** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
