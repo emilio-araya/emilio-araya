@@ -1,52 +1,76 @@
-# 👋 ¡Hola! Soy Emilio Araya Ordoñez
+# 👋 Emilio Araya Ordoñez
 
-🎓 Estudiante de informatica  | 💻 Apasionado por el backend y la arquitectura de sistemas  
-📍 Chile | ☕ Amante del café, los desafíos técnicos y la mejora continua
+🎓 Estudiante de Informática  
+💻 Desarrollador backend | 🐧 Linuxero por pasión  
+📍 Chile
 
-## 💼 Sobre mí
+---
 
-Soy un desarrollador enfocado en el backend y bases de datos. Actualmente me especializo en:
+## 🧾 Perfil Profesional
 
-- 🐘 **SQL** y diseño de bases de datos relacionales
-- ☕ **Java** y desarrollo de aplicaciones robustas
-- 🌐 **Microservicios con Spring Boot**
-- 🐳 **Docker** para contenerización y despliegue
-- 🐧 **Linux** como sistema principal
+Soy estudiante de informática con enfoque en el desarrollo backend, diseño de arquitecturas escalables y administración de bases de datos. Me apasiona explorar distintas áreas de la programación, manteniendo una mentalidad autodidacta y una fuerte inclinación por la mejora continua.
 
-## 🚀 Proyecto destacado
+Trabajo principalmente con tecnologías Java y Spring Boot, junto con bases de datos relacionales. Utilizo Arch Linux como entorno de desarrollo principal, adaptado y personalizado según mis necesidades técnicas.
 
-### 🛒 Ecomarket-SPA – Microservicios con Spring Boot
-Repositorio donde desarrollo un sistema backend de e-commerce usando arquitectura de microservicios.
+---
 
-🔗 [Ver repositorio en GitHub](https://github.com/emilio-araya/ecomarket-spa)
+## ⚙️ Tecnologías que uso
 
-Incluye:
-- Gestión de usuarios, productos y pedidos
-- Servicios desacoplados y comunicación entre ellos
-- Bases de datos relacionales conectadas a cada microservicio
+### Lenguajes y Frameworks  
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+### Bases de Datos  
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+
+### DevOps & Herramientas  
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+### Sistema Operativo  
+![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)
+
+---
+
+## 🚀 Proyecto Destacado
+
+### 🛒 [Ecomarket-SPA](https://github.com/emilio-araya/ecomarket-spa)
+
+Sistema backend de comercio electrónico utilizando microservicios.
+
+**Características:**
+- Gestión modular: usuarios, productos y pedidos
+- Comunicación vía API REST
+- Contenerización con Docker
 - Buenas prácticas con Spring Boot
 
-## 🧠 Tecnologías que uso
+---
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+## 🧠 Áreas de Interés
+
+- Arquitectura de microservicios
+- Bases de datos relacionales
+- Contenerización y despliegue
+- Automatización en Linux
+- Productividad con Neovim y gestores de ventanas
+
+---
+
+## 🐧 Sobre mi entorno
+
+Utilizo **Arch Linux** como mi sistema operativo principal, altamente personalizado con entornos como **BSPWM** y herramientas como **Neovim**, buscando siempre eficiencia, control y estética.
+
+---
+
+## 📫 Contacto
 
 
+- 🐙 [GitHub: emilio-araya](https://github.com/emilio-araya)
 
-<!--
-**emilio-araya/Emilio-Araya** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+---
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+> *“Aprender y adaptarse es parte de lo que más disfruto del desarrollo.”*
