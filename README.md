@@ -1,4 +1,4 @@
-# 👋 Emilio Araya Ordoñez
+# 👋 Hola, soy Emilio Araya Ordoñez
 
 🎓 Estudiante de Informática  
 💻 Desarrollador backend | 🐧 Linuxero por pasión  
@@ -8,9 +8,9 @@
 
 ## 🧾 Perfil Profesional
 
-Soy estudiante de informática con enfoque en el desarrollo backend, diseño de arquitecturas escalables y administración de bases de datos. Me apasiona explorar distintas áreas de la programación, manteniendo una mentalidad autodidacta y una fuerte inclinación por la mejora continua.
+Soy estudiante de informática con fuerte enfoque en el desarrollo backend. Me especializo en construir arquitecturas escalables, administrar bases de datos relacionales y trabajar con herramientas modernas como Docker y Git. Me apasiona aprender de forma autodidacta y mejorar continuamente tanto mis habilidades como mis entornos de trabajo.
 
-Trabajo principalmente con tecnologías Java y Spring Boot, junto con bases de datos relacionales. Utilizo Arch Linux como entorno de desarrollo principal, adaptado y personalizado según mis necesidades técnicas.
+Trabajo principalmente con tecnologías Java y Spring Boot, y utilizo Arch Linux como entorno de desarrollo personalizado, optimizado para productividad y eficiencia.
 
 ---
 
@@ -30,6 +30,8 @@ Trabajo principalmente con tecnologías Java y Spring Boot, junto con bases de d
 ### DevOps & Herramientas  
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Neovim](https://img.shields.io/badge/Neovim-57A143?style=for-the-badge&logo=neovim&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
 ### Sistema Operativo  
 ![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)
@@ -40,37 +42,41 @@ Trabajo principalmente con tecnologías Java y Spring Boot, junto con bases de d
 
 ### 🛒 [Ecomarket-SPA](https://github.com/emilio-araya/ecomarket-spa)
 
-Sistema backend de comercio electrónico utilizando microservicios.
+Sistema backend de comercio electrónico desarrollado con enfoque en microservicios.
 
-**Características:**
-- Gestión modular: usuarios, productos y pedidos
-- Comunicación vía API REST
-- Contenerización con Docker
-- Buenas prácticas con Spring Boot
+**🧰 Stack:** Java · Spring Boot · MySQL · Docker · REST API  
+**🔍 Características:**
+- Gestión modular: usuarios, productos y pedidos  
+- Comunicación vía API REST  
+- Arquitectura desacoplada y escalable  
+- Contenerización y despliegue con Docker  
 
 ---
 
 ## 🧠 Áreas de Interés
 
+- Diseño de APIs RESTful
 - Arquitectura de microservicios
-- Bases de datos relacionales
+- Automatización en sistemas Linux
 - Contenerización y despliegue
-- Automatización en Linux
-- Productividad con Neovim y gestores de ventanas
+- Productividad con Neovim y tiling window managers
+- Escritura limpia y mantenible en backend Java
 
 ---
 
 ## 🐧 Sobre mi entorno
 
-Utilizo **Arch Linux** como mi sistema operativo principal, altamente personalizado con entornos como **BSPWM** y herramientas como **Neovim**, buscando siempre eficiencia, control y estética.
+Utilizo **Arch Linux** como sistema operativo principal, altamente personalizado con entornos como **BSPWM** y herramientas como **Neovim**. Busco eficiencia, control y estética en cada parte de mi entorno de desarrollo.
 
 ---
 
 ## 📫 Contacto
 
-
 - 🐙 [GitHub: emilio-araya](https://github.com/emilio-araya)
 
 ---
 
-> *“Aprender y adaptarse es parte de lo que más disfruto del desarrollo.”*
+> *“Me gusta aprender, automatizar y construir soluciones que escalen bien y funcionen mejor.”*
+
+
+
