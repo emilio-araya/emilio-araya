@@ -44,4 +44,4 @@
 
 > *"El conocimiento no se hereda, se conquista línea por línea."*
 
-> *PD: Pasé Programación de Base de Datos con un 5.0. Sí, me dolió… pero aprendí como nunca.*
+
