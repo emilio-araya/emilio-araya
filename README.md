@@ -57,17 +57,37 @@ Aplicación de escritorio para gestión de productos y ventas tipo supermercado.
 </p>
 
 ---
+---
 
-# 📊 GitHub Stats
+# 📊 Mis estadísticas en GitHub
 
+## ⭐ Actividad general
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=emilio-araya&show_icons=true&theme=tokyonight" height="160"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=emilio-araya&layout=compact&theme=tokyonight" height="160"/>
+  <img src="https://github-readme-stats-k7wr.vercel.app/api?username=emilio-araya&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" height="160" alt="stats"/>
 </p>
 
+---
+
+## 🔤 Lenguajes más usados
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=emilio-araya&theme=tokyonight" height="160"/>
+  <img src="https://github-readme-stats-k7wr.vercel.app/api/top-langs/?username=emilio-araya&layout=compact&theme=tokyonight" height="160" alt="languages"/>
 </p>
+
+---
+
+## 🔥 Racha de commits
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=emilio-araya&theme=tokyonight&date_format=j%20M%5B%20Y%5D" height="160" alt="streak"/>
+</p>
+
+---
+
+## 🏆 Trofeos (opcional)
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=emilio-araya&theme=tokyonight&no-frame=true&margin-w=10" alt="trophies"/>
+</p>
+
+---
 
 ---
 
