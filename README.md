@@ -1,77 +1,113 @@
 <!-- Banner animado -->
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&pause=1000&color=36BCF7&center=true&vCenter=true&width=650&lines=%F0%9F%91%8B+%C2%A1Hola!+Soy+Emilio+Araya+Ordo%C3%B1ez;Ingenier%C3%ADa+en+Inform%C3%A1tica+%7C+Backend+%7C+Linux+%7C+Cybersec;Bienvenido+a+mi+perfil+de+GitHub+%F0%9F%9A%80" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=1000&color=36BCF7&center=true&vCenter=true&width=720&lines=Hola%2C+soy+Emilio+Araya+Ordo%C3%B1ez;Estudiante+de+Ingenier%C3%ADa+en+Inform%C3%A1tica;Backend+%7C+Linux+%7C+Cybersecurity;Bienvenido+a+mi+perfil+de+GitHub" />
 </p>
 
 ---
 
-# 👨‍💻 Sobre mí
+## 👨‍💻 Perfil
 
 🎓 **Estudiante de Ingeniería en Informática**  
-🧠 Apasionado por la programación, las bases de datos y el desarrollo web desde la lógica hasta el diseño.  
+💼 **Backend Jr | Linux | Fundamentos de Ciberseguridad**
 
-💻 Trabajo con **HTML**, **CSS**, **JS**, **Python**, **Java** y **SQL**.  
-🐧 Usuario de **Arch Linux** (sí, *ricing gang* 😎).  
-🔒 Explorando **ciberseguridad**, automatización y administración de sistemas.
+Me enfoco en el desarrollo de software con lógica sólida, validaciones estrictas y estructuras mantenibles.  
+Me interesa comprender los sistemas **desde dentro**: cómo se ejecutan, cómo se almacenan los datos (SQL y NoSQL) y cómo se aseguran.
 
----
-
-# 🚀 Proyecto destacado
-
-### 🛒 **[Ecomarket SPA](https://github.com/emilio-araya/ecomarket-spa)**
-Aplicación de escritorio para gestión de productos y ventas tipo supermercado.  
-✔️ Construida en **Java (NetBeans)**  
-✔️ Arquitectura ordenada, validaciones fuertes  
-✔️ Automatización de lógica de negocio: stock, totales, flujos de ventas  
+Trabajo cómodo tanto a nivel de código como de sistema operativo, con especial interés en **Linux**, automatización y seguridad informática.
 
 ---
 
-# 📚 Actualmente aprendiendo
+## 🎯 Enfoque Profesional
 
-- Hardening y ciberseguridad  
-- Administración avanzada de Linux  
-- Automatización con Python  
-- JavaScript y herramientas modernas
-
----
-
-# 🧠 Tecnologías y herramientas
-
-<p align="center">
-  
-<img src="https://img.shields.io/badge/Java-007396?style=flat&logo=java&logoColor=white" />
-<img src="https://img.shields.io/badge/NetBeans-1B6AC6?style=flat&logo=apache-netbeans-ide&logoColor=white" />
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" />
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" />
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />
-<br/>
-<img src="https://img.shields.io/badge/SQL-336791?style=flat&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/MySQL-005C84?style=flat&logo=mysql&logoColor=white" />
-<img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" />
-<img src="https://img.shields.io/badge/VSCode-007ACC?style=flat&logo=visual-studio-code&logoColor=white" />
-<img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" />
-<img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=flat&logo=arch-linux&logoColor=white" />
-<img src="https://img.shields.io/badge/Cybersecurity-232F3E?style=flat&logo=hackthebox&logoColor=green" />
-
-</p>
-
----
----
-
+- Desarrollo backend y lógica de negocio
+- Programación estructurada y mantenible
+- Bases de datos relacionales y no relacionales
+- Sistemas Linux y administración
+- Automatización y scripting
+- Fundamentos prácticos de ciberseguridad
 
 ---
 
-# 📫 Contacto
+## 🚀 Proyecto Destacado
+
+### 🛒 **Ecomarket SPA**
+📎 https://github.com/emilio-araya/ecomarket-spa
+
+Aplicación de escritorio desarrollada para la gestión de productos y ventas en un entorno tipo supermercado, priorizando la consistencia de datos, validaciones y control de flujos de negocio.
+
+**Características principales:**
+- Gestión de productos, stock y ventas
+- Validaciones estrictas de entrada de datos
+- Cálculo automático de totales
+- Control de inventario
+- Lógica de negocio clara y desacoplada
+
+**Tecnologías utilizadas:**
+- Java  
+- NetBeans  
+- Programación Orientada a Objetos  
+
+---
+
+## 📚 Actualmente Aprendiendo
+
+- Hardening y fundamentos de seguridad informática
+- Administración avanzada de sistemas Linux
+- Automatización y scripting con Python
+- JavaScript moderno
+- Bases de datos NoSQL con MongoDB y modelado de documentos JSON
+
+---
+
+## 🧠 Tecnologías
+
+### Lenguajes y Formatos
+- Java  
+- Python  
+- JavaScript  
+- SQL  
+- JSON  
+
+### Backend y Sistemas
+- Linux (Arch Linux)
+- Bash
+- Git
+- NetBeans
+- Visual Studio Code
+
+### Bases de Datos
+- MySQL  
+- PostgreSQL  
+- MongoDB (NoSQL)
+
+### Seguridad
+- Fundamentos de ciberseguridad
+- Buenas prácticas de seguridad
+- Práctica en entornos controlados
+
+---
+
+## 📈 En Progreso
+
+- Refactorización a patrones de diseño (MVC)
+- Persistencia de datos con bases de datos
+- Modelado de datos NoSQL con MongoDB
+- Manejo de errores y logging
+- Automatización de tareas en Linux
+- Profundización en seguridad de sistemas
+
+---
+
+## 📫 Contacto
 
 ✉️ **emiliolokillo611@gmail.com**
 
 ---
 
 <p align="center">
-  <em>"El conocimiento no se hereda, se conquista línea por línea."</em>
+  <em>"El conocimiento no se hereda, se construye línea por línea."</em>
 </p>
 
 <p align="center">
-  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="400"/>
+  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="380"/>
 </p>
