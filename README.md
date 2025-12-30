@@ -10,21 +10,21 @@
 🎓 **Estudiante de Ingeniería en Informática**  
 💼 **Backend Jr | Linux | Fundamentos de Ciberseguridad**
 
-Me enfoco en el desarrollo de software con lógica sólida, validaciones estrictas y estructuras mantenibles.  
-Me interesa comprender los sistemas **desde dentro**: cómo se ejecutan, cómo se almacenan los datos (SQL y NoSQL) y cómo se aseguran.
+Me enfoco en el desarrollo de software con **lógica sólida**, **validaciones estrictas** y **estructuras mantenibles**.  
+Investigo los sistemas **desde dentro**: cómo se ejecutan, cómo almacenan datos (SQL y NoSQL) y cómo se resguardan.
 
-Trabajo cómodo tanto a nivel de código como de sistema operativo, con especial interés en **Linux**, automatización y seguridad informática.
+Trabajo cómodo a nivel de código y de sistema operativo, con especial interés en **Linux**, la automatización y la seguridad informática.
 
 ---
 
 ## 🎯 Enfoque Profesional
 
-- Desarrollo backend y lógica de negocio
+- Diseño y desarrollo de backend con reglas de negocio claras
 - Programación estructurada y mantenible
-- Bases de datos relacionales y no relacionales
-- Sistemas Linux y administración
-- Automatización y scripting
-- Fundamentos prácticos de ciberseguridad
+- Modelado y consultas en bases de datos relacionales y NoSQL
+- Administración de sistemas Linux y shell scripting
+- Automatización de tareas y despliegues
+- Buenas prácticas de seguridad y hardening inicial
 
 ---
 
@@ -33,14 +33,12 @@ Trabajo cómodo tanto a nivel de código como de sistema operativo, con especial
 ### 🛒 **Ecomarket SPA**
 📎 https://github.com/emilio-araya/ecomarket-spa
 
-Aplicación de escritorio desarrollada para la gestión de productos y ventas en un entorno tipo supermercado, priorizando la consistencia de datos, validaciones y control de flujos de negocio.
+Aplicación de escritorio para gestionar productos y ventas en un entorno tipo supermercado, priorizando la consistencia de datos, las validaciones y el control del flujo de negocio.
 
 **Características principales:**
-- Gestión de productos, stock y ventas
-- Validaciones estrictas de entrada de datos
-- Cálculo automático de totales
-- Control de inventario
-- Lógica de negocio clara y desacoplada
+- Gestión de productos, stock y ventas con control de inventario
+- Validaciones estrictas de entrada y cálculo automático de totales
+- Lógica de negocio modular y fácil de mantener
 
 **Tecnologías utilizadas:**
 - Java  
@@ -82,17 +80,17 @@ Aplicación de escritorio desarrollada para la gestión de productos y ventas en
 
 ### Seguridad
 - Fundamentos de ciberseguridad
-- Buenas prácticas de seguridad
+- Buenas prácticas de seguridad y gestión de credenciales
 - Práctica en entornos controlados
 
 ---
 
 ## 📈 En Progreso
 
-- Refactorización a patrones de diseño (MVC)
-- Persistencia de datos con bases de datos
+- Aplicación de patrones de diseño (MVC) a proyectos existentes
+- Persistencia de datos con bases relacionales y documentos
 - Modelado de datos NoSQL con MongoDB
-- Manejo de errores y logging
+- Manejo de errores, logging y observabilidad
 - Automatización de tareas en Linux
 - Profundización en seguridad de sistemas
 
