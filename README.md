@@ -14,6 +14,9 @@
   <a href="mailto:emiliolokillo611@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contactar-D14836?style=flat-square&logo=gmail&logoColor=white" />
   </a>
+  <a href="https://github.com/emilio-araya" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-emilio--araya-181717?style=flat-square&logo=github" />
+  </a>
   <img src="https://komarev.com/ghpvc/?username=emilio-araya&label=Visitas&color=0e75b6&style=flat-square" alt="visitas" />
 </p>
 
@@ -126,37 +129,26 @@ Me especializo en construir soluciones reales: desde microservicios desplegados 
 
 ---
 
-## 📂 Todos mis Proyectos
+## 📂 Mis Repositorios
 
-### 🐳 proyecto-innovatech ⭐ DESTACADO
-🔗 [github.com/emilio-araya/proyecto-innovatech](https://github.com/emilio-araya/proyecto-innovatech)  
-`JavaScript` `Docker` `AWS` `GitHub Actions` `PostgreSQL`  
-Plataforma de gestión de despachos con arquitectura de microservicios, contenedorización Docker y CI/CD en AWS EC2.
+Aquí tienes todos mis proyectos públicos y avances:
 
-### 🛒 ecomarket-spa
+### 🛒 Ecomarket SPA
 🔗 [github.com/emilio-araya/ecomarket-spa](https://github.com/emilio-araya/ecomarket-spa)  
-`Java` `POO` `Validaciones`  
-Aplicación de escritorio para gestión de stock y ventas en Java con programación orientada a objetos y validaciones estrictas.
+Aplicación de escritorio para la gestión de stock y ventas en **Java** con POO sólida y validaciones estrictas.
 
-### 💧 riego-automatico-arduino
-🔗 [github.com/emilio-araya/riego-automatico-arduino](https://github.com/emilio-araya/riego-automatico-arduino)  
-`C++` `Arduino` `IoT` `Sensores`  
-Sistema embebido de automatización de riego con sensores de humedad y Arduino. Programación en C++ para hardware.
-
-### 📊 Programasion-Bases-de-datos-pl-sql
+### 📊 Programación Bases de Datos PL/SQL
 🔗 [github.com/emilio-araya/Programasion-Bases-de-datos-pl-sql](https://github.com/emilio-araya/Programasion-Bases-de-datos-pl-sql)  
-`PL/SQL` `Oracle` `Procedimientos`  
-Ejercicios y avances en programación de bases de datos con PL/SQL: procedimientos almacenados, triggers y lógica transaccional.
+Repositorio de ejercicios, procedimientos almacenados, triggers y avances en bases de datos SQL / PL-SQL.
 
+### 💧 Riego Automático IoT
+🔗 [github.com/emilio-araya/riego-automatico-arduino](https://github.com/emilio-araya/riego-automatico-arduino)  
+Sistema embebido de automatización de riego con sensores y Arduino programado en **C++**.
 
 ---
 
 ## 📊 GitHub Stats
 
-<p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=emilio-araya&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=emilio-araya&layout=compact&langs_count=8&theme=tokyonight" />
-</p>
 
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=emilio-araya&theme=tokyonight" />
@@ -183,8 +175,4 @@ Ejercicios y avances en programación de bases de datos con PL/SQL: procedimient
 
 <p align="center">
   <em>"El conocimiento no se hereda, se construye línea por línea."</em>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/trinib/trinib/main/github-user-contribution.svg" />
 </p>
