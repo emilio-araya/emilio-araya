@@ -2,11 +2,9 @@
 
 ### Backend · Cloud · DevOps · Cybersecurity
 
-Estudiante de **Ingeniería en Informática**, especializado en desarrollo Web y enfocado en construir sistemas que combinen **backend, cloud, automatización y seguridad**.
+Estudiante de **Ingeniería en Informática**, enfocado en desarrollo backend, cloud, automatización, Linux y seguridad.
 
-Me interesa entender cómo funciona un sistema completo: desde el código y la arquitectura de microservicios hasta su infraestructura, despliegue, observabilidad y seguridad.
-
-> **No busco solamente hacer que el código funcione. Busco entender cómo construir sistemas que puedan evolucionar, desplegarse y mantenerse.**
+Me interesa entender el ciclo completo de un sistema: desde el código y la arquitectura hasta el despliegue, la infraestructura y la seguridad.
 
 🇨🇱 Chile · 💻 Backend & Cloud · 🔐 Cybersecurity
 
@@ -18,14 +16,12 @@ Me interesa entender cómo funciona un sistema completo: desde el código y la a
 
 Actualmente estoy desarrollando mi perfil profesional alrededor de cuatro áreas:
 
-* **Backend:** desarrollo de APIs y sistemas distribuidos con Java, Spring Boot y Node.js.
-* **Cloud & DevOps:** infraestructura como código, contenedores, Kubernetes y CI/CD.
-* **Cybersecurity:** seguridad de aplicaciones, identidad, Zero Trust y ethical hacking.
-* **Linux:** administración, automatización y trabajo diario sobre Linux/Arch.
+- **Backend:** APIs y aplicaciones con Java, Spring Boot y Node.js.
+- **Cloud & DevOps:** Docker, Kubernetes, AWS, CI/CD e infraestructura cloud.
+- **Cybersecurity:** identidad, autenticación, seguridad de aplicaciones y cloud security.
+- **Linux:** administración, automatización y trabajo diario sobre Linux/Arch.
 
-Una de las cosas que más me interesa es conectar estas áreas.
-
-Por ejemplo, no solamente desplegar una aplicación en Kubernetes, sino entender **cómo se construye la infraestructura, cómo se autentican los usuarios, cómo se despliega automáticamente y cómo se protege el sistema**.
+Mi objetivo es conectar estas áreas y comprender no solo cómo desarrollar una aplicación, sino también cómo desplegarla, operarla y protegerla.
 
 ---
 
@@ -35,28 +31,23 @@ Por ejemplo, no solamente desplegar una aplicación en Kubernetes, sino entender
 
 ### Plataforma Cloud-Native de gestión de despachos
 
-Proyecto centrado en construir una plataforma distribuida utilizando **microservicios, Kubernetes, AWS, Terraform y CI/CD**.
+Proyecto académico de **DevOps y Cloud Native** basado en una arquitectura distribuida con frontend, servicios backend, contenedores y Kubernetes sobre AWS.
 
-**Arquitectura:**
+**Tecnologías y conceptos trabajados:**
 
-`Frontend → Microservicios → Kubernetes → AWS`
+- ☸️ Amazon EKS
+- 🐳 Docker
+- 🔄 GitHub Actions / CI/CD
+- 📦 Amazon ECR
+- 📈 Horizontal Pod Autoscaler
+- ☁️ AWS
+- 🏗️ Infraestructura cloud
 
-### Lo que trabajé
-
-* ☸️ Amazon EKS
-* 🏗️ Terraform
-* 🐳 Docker
-* 🔄 GitHub Actions
-* 📦 Amazon ECR
-* 🌐 VPC y arquitectura Multi-AZ
-* 📈 Horizontal Pod Autoscaler
-* 🔐 IAM, STS y AWS Systems Manager
-* 🛡️ Principios Zero Trust
-* 🚫 Administración sin acceso SSH directo
+El proyecto incluye despliegue automatizado desde GitHub Actions hacia ECR y EKS.
 
 **Stack**
 
-`Java` `Spring Boot` `Docker` `Kubernetes` `Terraform` `AWS` `GitHub Actions`
+`Java` `Spring Boot` `Docker` `Kubernetes` `AWS` `GitHub Actions`
 
 🔗 **[Ver proyecto](https://github.com/emilio-araya/proyecto-innovatech)**
 
@@ -64,36 +55,37 @@ Proyecto centrado en construir una plataforma distribuida utilizando **microserv
 
 ## 🏗️ Ecomarket-SPA
 
-### Backend basado en microservicios
+### Backend REST con arquitectura por capas
 
-Sistema backend compuesto por múltiples servicios independientes comunicados mediante un **API Gateway**.
+Backend académico desarrollado con **Spring Boot**, organizado mediante una arquitectura por capas:
 
 ```text
-                 ┌── productos-service
-                 │
-Cliente → Gateway ├── compras-service
-                 │
-                 └── usuarios-service
-
-        Configuración centralizada
-                ↓
-          config-server
+Cliente
+   ↓
+Controller
+   ↓
+Service
+   ↓
+Repository
+   ↓
+MariaDB
 ```
 
-### Implementación
+### Lo que trabajé
 
-* Spring Boot
-* Spring Security
-* Spring Data JPA
-* API Gateway
-* MySQL / H2
-* Configuración centralizada
-* Maven
-* Arquitectura distribuida
+- APIs REST
+- Spring Boot
+- Spring Data JPA
+- Validación de datos
+- Manejo global de excepciones
+- HATEOAS
+- Pruebas unitarias con JUnit y Mockito
+- Configuración mediante variables de entorno
+- Maven
 
 **Stack**
 
-`Java 17` `Spring Boot 3` `Spring Security` `JPA` `MySQL` `Maven`
+`Java 17` `Spring Boot 3` `Spring Data JPA` `MariaDB` `JUnit` `Mockito` `Maven`
 
 🔗 **[Ver proyecto](https://github.com/emilio-araya/ecomarket-spa)**
 
@@ -101,18 +93,11 @@ Cliente → Gateway ├── compras-service
 
 ## 🔐 Desarrollo Cloud Native
 
-### OAuth 2.0 / OpenID Connect en múltiples nubes
+### Identidad y autenticación Cloud
 
-Proyecto desarrollado para comprender cómo funcionan los sistemas modernos de **identidad y autenticación federada** y qué elementos pueden mantenerse independientes del proveedor cloud.
+Repositorio académico donde estoy explorando **OAuth 2.0 / OpenID Connect** y la integración de aplicaciones con proveedores de identidad cloud.
 
-Implementé el mismo flujo utilizando dos proveedores:
-
-|               | Azure              | AWS                |
-| ------------- | ------------------ | ------------------ |
-| 🔑 Identidad  | Microsoft Entra ID | Amazon Cognito     |
-| 🔐 Protocolo  | OAuth 2.0 / OIDC   | OAuth 2.0 / OIDC   |
-| 📦 Librería   | MSAL               | react-oidc-context |
-| 🌐 Plataforma | Azure              | AWS                |
+El trabajo incluye una integración con **Microsoft Entra ID** y una línea de trabajo con **Amazon Cognito**, permitiendo estudiar las diferencias entre proveedores manteniendo conceptos comunes de identidad y autenticación.
 
 **Stack**
 
@@ -126,9 +111,9 @@ Implementé el mismo flujo utilizando dos proveedores:
 
 ### 🌱 Sistema de Riego Automático
 
-Sistema embebido desarrollado con Arduino utilizando múltiples sensores y lógica de decisión.
+Sistema embebido desarrollado con Arduino utilizando sensores de humedad del suelo, lluvia, luminosidad y temperatura.
 
-Incluye programación no bloqueante mediante `millis()`.
+Incluye programación no bloqueante mediante `millis()` y lógica de decisión para controlar el sistema de riego.
 
 🔗 **[Ver proyecto](https://github.com/emilio-araya/riego-automatico-arduino)**
 
@@ -138,29 +123,25 @@ Incluye programación no bloqueante mediante `millis()`.
 
 Repositorio académico enfocado en **Oracle SQL / PL/SQL**.
 
-Incluye:
+Incluye trabajo con:
 
-* Cursores
-* Triggers
-* Procedimientos
-* Funciones
-* Procesamiento de datos
-* Automatización mediante PL/SQL
+- Cursores
+- VARRAY
+- Variables BIND
+- Excepciones
+- Triggers
+- Procedimientos
+- Funciones
+- Packages
+- SQL dinámico
 
-🔗 **[Ver repositorio](https://github.com/emilio-araya/Programasion-de-bases-de-datos-pl-sql)**
+🔗 **[Ver repositorio](https://github.com/emilio-araya/Programasion-Bases-de-datos-pl-sql)**
 
 ---
 
 ### 🛒 Proyecto E-commerce
 
-Proyecto colaborativo de desarrollo Web donde implementé el **carrito de compras**, incluyendo:
-
-* Persistencia con `localStorage`
-* Gestión de cantidades
-* Eliminación de productos
-* Cálculo de totales
-* Confirmación de compras
-* Persistencia de pedidos
+Proyecto colaborativo de desarrollo Web donde trabajé en funcionalidades del carrito de compras, incluyendo persistencia con `localStorage`, gestión de cantidades, eliminación de productos, cálculo de totales y persistencia de pedidos.
 
 🔗 **[Ver proyecto](https://github.com/Nicolasdx1/ProyectoFullStack)**
 
@@ -178,11 +159,11 @@ Proyecto colaborativo de desarrollo Web donde implementé el **carrito de compra
 
 ### ⚙️ Backend
 
-`Spring Boot` · `Spring Security` · `Spring Data JPA` · `Node.js` · `Maven`
+`Spring Boot` · `Spring Data JPA` · `Node.js` · `Maven`
 
 ### ☁️ Cloud
 
-`AWS` · `Amazon EKS` · `Amazon ECR` · `VPC` · `IAM` · `STS` · `CloudWatch` · `Azure` · `Microsoft Entra ID`
+`AWS` · `Amazon EKS` · `Amazon ECR` · `IAM` · `STS` · `Azure` · `Microsoft Entra ID`
 
 ### 🚀 DevOps
 
@@ -202,35 +183,30 @@ Proyecto colaborativo de desarrollo Web donde implementé el **carrito de compra
 
 La seguridad es una parte importante de mi formación.
 
-Estoy especialmente interesado en:
+Me interesa especialmente:
 
-* 🔎 Reconocimiento y análisis de vulnerabilidades
-* 🌐 Web Application Security
-* 💉 SQL Injection
-* 🔐 Identity & Access Management
-* 🪪 OAuth 2.0 / OIDC
-* 🛡️ Zero Trust Architecture
-* 🔑 MFA y autenticación moderna
-* 🧪 Ethical Hacking
-* 🔴 Red Team / Blue Team
-* ☁️ Cloud Security
+- 🔎 Análisis de vulnerabilidades
+- 🌐 Web Application Security
+- 🔐 Identity & Access Management
+- 🪪 OAuth 2.0 / OIDC
+- 🛡️ Zero Trust Architecture
+- 🔑 MFA y autenticación moderna
+- 🧪 Ethical Hacking
+- ☁️ Cloud Security
 
-Mi objetivo es complementar el desarrollo de software con una visión de **seguridad desde el diseño**, no solamente como una etapa posterior.
+Mi objetivo es incorporar una visión de **seguridad desde el diseño**, no solamente como una etapa posterior al desarrollo.
 
 ---
 
 # 📜 Certificaciones
 
 ### Cybersecurity Awareness — CAPC™
-
 **Certiprof · 2026**
 
 ### Cybersecurity Foundation — CSFPC™
-
 **Certiprof · 2026**
 
 ### Ethical Hacking Professional — CEHPC™
-
 **Certiprof · 2026**
 
 ---
@@ -239,42 +215,42 @@ Mi objetivo es complementar el desarrollo de software con una visión de **segur
 
 Estoy profundizando especialmente en:
 
-* ☸️ **Kubernetes**
-* 🏗️ **Terraform**
-* ☁️ **Cloud-Native Architecture**
-* 🔐 **Cloud Security**
-* 🤖 **Programación con IA**
-* 🧩 **Arquitecturas distribuidas**
-* 🚀 **DevOps & CI/CD**
+- ☸️ **Kubernetes**
+- 🏗️ **Terraform**
+- ☁️ **Cloud-Native Architecture**
+- 🔐 **Cloud Security**
+- 🤖 **Programación con IA**
+- 🧩 **Arquitecturas distribuidas**
+- 🚀 **DevOps & CI/CD**
 
-También estoy explorando cómo integrar **IA en el proceso de desarrollo de software**, desde asistencia durante la programación hasta aplicaciones que incorporen capacidades de IA directamente.
+También estoy explorando cómo integrar **IA en el proceso de desarrollo de software** y en aplicaciones que incorporen capacidades de IA directamente.
 
 ---
 
 # 🎯 Hacia dónde voy
 
-Quiero seguir construyendo experiencia en la intersección entre:
+Quiero seguir creciendo en la intersección entre:
 
 ```text
-        Backend
-           │
-           ▼
-    Microservicios
-           │
-           ▼
-      Cloud / DevOps
-           │
-           ▼
-     Kubernetes
-           │
-           ▼
-       Security
-           │
-           ▼
-        Cloud-Native
+Backend
+   │
+   ▼
+Arquitecturas distribuidas
+   │
+   ▼
+Cloud / DevOps
+   │
+   ▼
+Kubernetes
+   │
+   ▼
+Security
+   │
+   ▼
+Cloud-Native
 ```
 
-Mi objetivo profesional es convertirme en un desarrollador capaz de participar en **todo el ciclo de vida de un sistema**, desde el diseño y desarrollo hasta su infraestructura, despliegue y seguridad.
+Mi objetivo profesional es participar en el **ciclo de vida completo de un sistema**, desde el diseño y desarrollo hasta su infraestructura, despliegue y seguridad.
 
 ---
 
@@ -291,5 +267,3 @@ Mi objetivo profesional es convertirme en un desarrollador capaz de participar e
 Si quieres hablar sobre desarrollo, cloud, DevOps, cybersecurity u Open Source, puedes encontrarme en GitHub.
 
 **Construir. Automatizar. Proteger. Aprender.**
-
----
