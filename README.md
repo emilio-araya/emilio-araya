@@ -32,18 +32,20 @@ Me gusta construir soluciones modulares, seguras y escalables, aplicando buenas 
 Sistema distribuido compuesto por 5 repositorios: frontend SPA, dos microservicios de negocio, un BFF y la infraestructura como código.
 
 ```text
-React SPA (MSAL) ──► BFF ──► ms-catalog ──► Oracle DB
-                      └──► ms-orders  ──► Oracle DB
+React SPA (MSAL / Amplify) ──► BFF ──► ms-catalog ──► Oracle DB
+                                └──► ms-orders  ──► Oracle DB (Flyway)
 
-Auth:  Microsoft Entra ID (OAuth2 + JWT, control por roles)
-Infra: Terraform · Docker · AWS · CI con GitHub Actions
+Auth:  Entra ID (local) · AWS Cognito (nube) — OAuth2 + JWT
+AWS:   API Gateway · CloudFront · ECS Fargate · RDS Oracle · Secrets Manager
+CI/CD: GitHub Actions + OIDC · Terraform · Docker
 ```
 
 * Arquitectura de microservicios (catálogo y pedidos) detrás de un BFF en Spring Boot.
-* Autenticación y autorización con Microsoft Entra ID, OAuth2 y validación de tokens JWT.
-* Gestión de pedidos con reserva de stock e integración entre servicios vía APIs REST.
-* Infraestructura como código con Terraform, Docker y despliegue en AWS.
-* CI con GitHub Actions y pruebas automatizadas en backend y frontend.
+* Autenticación OAuth2/JWT dual: Microsoft Entra ID en local y AWS Cognito en la nube.
+* Autorización por roles y a nivel de objeto, con propagación de tokens JWT entre servicios.
+* Migraciones de base de datos versionadas con Flyway.
+* Infraestructura como código con Terraform: API Gateway, CloudFront, ECS Fargate con autoescalado, RDS Oracle y Secrets Manager.
+* CI/CD con GitHub Actions: cobertura con JaCoCo y Vitest, y despliegue a AWS vía OIDC (sin credenciales estáticas).
 
 **Repositorios:** [Frontend](https://github.com/emilio-araya/pedidos360-frontend) · [BFF](https://github.com/emilio-araya/pedidos360-bff) · [Catálogo](https://github.com/emilio-araya/pedidos360-catalog) · [Pedidos](https://github.com/emilio-araya/pedidos360-orders) · [Infraestructura](https://github.com/emilio-araya/pedidos360-infra)
 
