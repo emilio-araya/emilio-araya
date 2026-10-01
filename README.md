@@ -27,6 +27,21 @@ Me gusta construir soluciones modulares, seguras y escalables, aplicando buenas 
 
 ## 🚀 Proyectos destacados
 
+<p align="center">
+  <a href="https://github.com/emilio-araya/pedidos360-frontend">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=emilio-araya&repo=pedidos360-frontend&theme=tokyonight&hide_border=true" />
+  </a>
+  <a href="https://github.com/emilio-araya/pedidos360-infra">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=emilio-araya&repo=pedidos360-infra&theme=tokyonight&hide_border=true" />
+  </a>
+  <a href="https://github.com/emilio-araya/proyecto-innovatech">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=emilio-araya&repo=proyecto-innovatech&theme=tokyonight&hide_border=true" />
+  </a>
+  <a href="https://github.com/emilio-araya/ecomarket-spa">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=emilio-araya&repo=ecomarket-spa&theme=tokyonight&hide_border=true" />
+  </a>
+</p>
+
 ### 📦 Pedidos360 — Plataforma de gestión de pedidos y catálogo
 
 Sistema distribuido compuesto por 5 repositorios: frontend SPA, dos microservicios de negocio, un BFF y la infraestructura como código.
@@ -80,6 +95,7 @@ Backend en Java 17 / Spring Boot 3 con arquitectura por capas para un sistema de
 ### 🔧 Otros proyectos
 
 * 🌿 **[Riego automático con Arduino](https://github.com/emilio-araya/riego-automatico-arduino)** — Sistema en C++ que controla una bomba de agua según sensores de humedad, lluvia, luminosidad y temperatura.
+* 🗄️ **[Bases de datos PL/SQL](https://github.com/emilio-araya/programacion-bases-datos-plsql)** — Prácticas en Oracle: cursores, triggers, funciones, procedimientos, packages y SQL dinámico.
 * 📱 **[Aplicaciones Móviles](https://github.com/emilio-araya/Aplicaciones-Moviles)** — Aprendizaje de Kotlin aplicado al desarrollo Android.
 
 ---
@@ -107,7 +123,13 @@ Backend en Java 17 / Spring Boot 3 con arquitectura por capas para un sistema de
 ### DevOps y herramientas
 
 <p>
-  <img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,terraform,githubactions,linux,git" />
+  <img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,terraform,githubactions,maven,nginx,linux,git" />
+</p>
+
+### Hardware y otros
+
+<p>
+  <img src="https://skillicons.dev/icons?i=arduino,cpp" />
 </p>
 
 ---
@@ -117,6 +139,10 @@ Backend en Java 17 / Spring Boot 3 con arquitectura por capas para un sistema de
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=emilio-araya&show_icons=true&theme=tokyonight&hide_border=true" height="165" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=emilio-araya&layout=compact&theme=tokyonight&hide_border=true" height="165" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=emilio-araya&theme=tokyonight&hide_border=true" height="165" />
 </p>
 
 ---
