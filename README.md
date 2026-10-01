@@ -1,4 +1,4 @@
-<h1 align="center">Hola, soy Emilio Araya 👋</h1>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1b27,100:1f6feb&height=180&section=header&text=Emilio%20Araya&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=32&desc=Backend%20Developer%20%C2%B7%20Java%20%C2%B7%20Spring%20Boot%20%C2%B7%20AWS&descAlignY=52&descSize=17" width="100%"/>
 
 <h3 align="center">Estudiante de Ingeniería en Informática · Backend Developer · Chile 🇨🇱</h3>
 
@@ -6,6 +6,8 @@
   <b>🇬🇧 EN:</b> Computer Engineering student focused on backend development with Java &amp; Spring Boot,
   cloud infrastructure on AWS, and CI/CD automation. Featured projects below 👇
 </p>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ---
 
@@ -104,33 +106,48 @@ Backend en Java 17 / Spring Boot 3 con arquitectura por capas para un sistema de
 
 ### Lenguajes
 
-<p>
-  <img src="https://skillicons.dev/icons?i=java,ts,js,html,css" />
-</p>
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 
 ### Backend y Frontend
 
-<p>
-  <img src="https://skillicons.dev/icons?i=spring,react,vite" />
-</p>
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFC?style=for-the-badge&logo=vite&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
 
 ### Bases de datos
 
-<p>
-  <img src="https://skillicons.dev/icons?i=mysql,oracle" />
-</p>
+![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)
+![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Flyway](https://img.shields.io/badge/Flyway-CC0200?style=for-the-badge&logo=flyway&logoColor=white)
 
 ### DevOps y herramientas
 
-<p>
-  <img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,terraform,githubactions,maven,nginx,linux,git" />
-</p>
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-### Hardware y otros
+### Testing
 
-<p>
-  <img src="https://skillicons.dev/icons?i=arduino,cpp" />
-</p>
+![JUnit 5](https://img.shields.io/badge/JUnit_5-25A162?style=for-the-badge&logo=junit5&logoColor=white)
+![Mockito](https://img.shields.io/badge/Mockito-78A641?style=for-the-badge)
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
+
+### Hardware
+
+![Arduino](https://img.shields.io/badge/Arduino-00878F?style=for-the-badge&logo=arduino&logoColor=white)
 
 ---
 
@@ -164,3 +181,5 @@ Backend en Java 17 / Spring Boot 3 con arquitectura por capas para un sistema de
 <p align="center">
   Siempre estoy interesado en aprender nuevas tecnologías y participar en proyectos que me permitan seguir creciendo como desarrollador.
 </p>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,100:1a1b27&height=120&section=footer" width="100%"/>
