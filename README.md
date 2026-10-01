@@ -1,111 +1,84 @@
 <h1 align="center">Hola, soy Emilio Araya 👋</h1>
 
-<h3 align="center">Estudiante de Ingeniería en Informática | Backend Developer</h3>
+<h3 align="center">Estudiante de Ingeniería en Informática · Backend Developer · Chile 🇨🇱</h3>
 
 <p align="center">
-  Desarrollo aplicaciones web y servicios backend, con especial interés en la arquitectura de software, la seguridad y las tecnologías cloud.
-</p>
-
-<p align="center">
-  <a href="https://github.com/emilio-araya">
-    <img src="https://img.shields.io/badge/GitHub-emilio--araya-181717?style=for-the-badge&logo=github" alt="GitHub">
-  </a>
+  <b>🇬🇧 EN:</b> Computer Engineering student focused on backend development with Java &amp; Spring Boot,
+  cloud infrastructure on AWS, and CI/CD automation. Featured projects below 👇
 </p>
 
 ---
 
 ## 👨‍💻 Sobre mí
 
-Soy estudiante de Ingeniería en Informática, interesado en el desarrollo de software, especialmente en el backend y la arquitectura de aplicaciones.
+Estudiante de Ingeniería en Informática, enfocado en el desarrollo backend y la arquitectura de aplicaciones.
 
 Me gusta construir soluciones modulares, seguras y escalables, aplicando buenas prácticas de programación y herramientas modernas de desarrollo.
 
-Actualmente, estoy fortaleciendo mis conocimientos en:
+**En qué estoy enfocado actualmente:**
 
 * Desarrollo backend con Java y Spring Boot.
-* Diseño e integración de APIs REST.
-* Autenticación y autorización mediante OAuth2 y JWT.
-* Contenedores y despliegue con Docker.
-* Infraestructura cloud y automatización.
-* Pruebas automatizadas e integración de servicios.
+* Diseño e integración de APIs REST, con autenticación OAuth2 y JWT.
+* Arquitectura de microservicios y diseño de sistemas escalables.
+* Infraestructura como código (Terraform) y despliegue en AWS.
+* Contenedores, Kubernetes y automatización CI/CD.
 
 ---
 
 ## 🚀 Proyectos destacados
 
-### 📦 Pedidos360
+### 📦 Pedidos360 — Plataforma de gestión de pedidos y catálogo
 
-**Plataforma de gestión de pedidos y catálogo**
+Sistema distribuido compuesto por 5 repositorios: frontend SPA, dos microservicios de negocio, un BFF y la infraestructura como código.
 
-Proyecto académico compuesto por varios servicios, desarrollado con una arquitectura modular y tecnologías modernas.
+```text
+React SPA (MSAL) ──► BFF ──► ms-catalog ──► Oracle DB
+                      └──► ms-orders  ──► Oracle DB
 
-**Tecnologías:**
+Auth:  Microsoft Entra ID (OAuth2 + JWT, control por roles)
+Infra: Terraform · Docker · AWS · CI con GitHub Actions
+```
 
-* Java 17
-* Spring Boot 3.5
-* React, TypeScript y Vite
-* Oracle Database y H2
-* Docker y Docker Compose
-* Microsoft Entra ID
-* OAuth2 y JWT
-* GitHub Actions
+* Arquitectura de microservicios (catálogo y pedidos) detrás de un BFF en Spring Boot.
+* Autenticación y autorización con Microsoft Entra ID, OAuth2 y validación de tokens JWT.
+* Gestión de pedidos con reserva de stock e integración entre servicios vía APIs REST.
+* Infraestructura como código con Terraform, Docker y despliegue en AWS.
+* CI con GitHub Actions y pruebas automatizadas en backend y frontend.
 
-**Características principales:**
-
-* Arquitectura basada en servicios independientes.
-* Backend dividido en catálogo, pedidos y BFF.
-* Autenticación y autorización mediante Microsoft Entra ID.
-* Validación de tokens JWT y control de acceso por roles.
-* Gestión de pedidos y reservas de stock.
-* Integración entre servicios mediante APIs REST.
-* Pruebas automatizadas para backend y frontend.
-* Configuración para ejecución local y despliegue en la nube.
-
-**Repositorios:**
-
-* [Frontend](https://github.com/emilio-araya/pedidos360-frontend)
-* [Infraestructura](https://github.com/emilio-araya/pedidos360-infra)
-* [BFF](https://github.com/emilio-araya/pedidos360-bff)
-* [Catálogo](https://github.com/emilio-araya/pedidos360-catalog)
-* [Pedidos](https://github.com/emilio-araya/pedidos360-orders)
+**Repositorios:** [Frontend](https://github.com/emilio-araya/pedidos360-frontend) · [BFF](https://github.com/emilio-araya/pedidos360-bff) · [Catálogo](https://github.com/emilio-araya/pedidos360-catalog) · [Pedidos](https://github.com/emilio-araya/pedidos360-orders) · [Infraestructura](https://github.com/emilio-araya/pedidos360-infra)
 
 ---
 
-### ☁️ Innovatech
+### ☁️ Innovatech — Infraestructura cloud-native en AWS
 
-**Infraestructura cloud-native**
+Despliegue de microservicios sobre Amazon EKS con prácticas DevOps y modelo de seguridad Zero Trust.
 
-Proyecto académico enfocado en el diseño y la implementación de una infraestructura moderna en AWS.
-
-**Tecnologías:**
-
-* AWS
-* Kubernetes y Amazon EKS
-* Docker
-* GitHub Actions
-* CloudWatch
-* Terraform
-
-**Características principales:**
-
-* Infraestructura basada en servicios cloud.
-* Orquestación de contenedores con Kubernetes.
-* Automatización de procesos mediante CI/CD.
-* Escalabilidad de aplicaciones.
-* Arquitectura de red distribuida en múltiples zonas de disponibilidad.
-* Aplicación de principios de seguridad Zero Trust.
+* Arquitectura Multi-AZ con subredes públicas y privadas; backend aislado de internet.
+* Pipeline CI/CD: GitHub Actions → Docker (multi-stage build) → ECR → EKS.
+* Zero Trust: acceso administrativo sin SSH, mediante AWS Systems Manager y credenciales temporales (STS).
+* Autoescalado del clúster y observabilidad centralizada con CloudWatch.
 
 [Ver repositorio](https://github.com/emilio-araya/proyecto-innovatech)
 
 ---
 
-### 🛒 Ecomarket SPA
+### 🌱 Ecomarket — API REST para gestión de productos
 
-**Aplicación web de comercio electrónico**
+Backend en Java 17 / Spring Boot 3 con arquitectura por capas para un sistema de productos ecológicos.
 
-Proyecto enfocado en el desarrollo de una aplicación web, aplicando tecnologías frontend y buenas prácticas de desarrollo.
+* CRUD completo de productos y proveedores, con validación mediante DTOs.
+* Persistencia con Spring Data JPA y MariaDB; respuestas hipermedia con Spring HATEOAS.
+* Documentación interactiva de la API con OpenAPI / Swagger UI.
+* Manejo centralizado de errores y pruebas con JUnit 5 y Mockito.
 
 [Ver repositorio](https://github.com/emilio-araya/ecomarket-spa)
+
+---
+
+### 🔧 Otros proyectos
+
+* 🌿 **[Riego automático con Arduino](https://github.com/emilio-araya/riego-automatico-arduino)** — Sistema en C++ que controla una bomba de agua según sensores de humedad, lluvia, luminosidad y temperatura.
+* 📱 **[Aplicaciones Móviles](https://github.com/emilio-araya/Aplicaciones-Moviles)** — Aprendizaje de Kotlin aplicado al desarrollo Android.
 
 ---
 
@@ -117,39 +90,23 @@ Proyecto enfocado en el desarrollo de una aplicación web, aplicando tecnología
   <img src="https://skillicons.dev/icons?i=java,ts,js,html,css" />
 </p>
 
-### Backend
+### Backend y Frontend
 
 <p>
-  <img src="https://skillicons.dev/icons?i=spring,nodejs" />
-</p>
-
-### Frontend
-
-<p>
-  <img src="https://skillicons.dev/icons?i=react,vite" />
+  <img src="https://skillicons.dev/icons?i=spring,react,vite" />
 </p>
 
 ### Bases de datos
 
 <p>
-  <img src="https://skillicons.dev/icons?i=mysql,postgres,oracle" />
+  <img src="https://skillicons.dev/icons?i=mysql,oracle" />
 </p>
 
 ### DevOps y herramientas
 
 <p>
-  <img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,terraform,github,githubactions,linux,git" />
+  <img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,terraform,githubactions,linux,git" />
 </p>
-
----
-
-## 📚 Actualmente aprendiendo
-
-* Arquitectura de microservicios.
-* Infraestructura como código.
-* Seguridad en aplicaciones web.
-* Automatización de despliegues.
-* Diseño de sistemas escalables.
 
 ---
 
@@ -165,8 +122,14 @@ Proyecto enfocado en el desarrollo de una aplicación web, aplicando tecnología
 ## 📫 Contacto
 
 <p align="center">
+  <a href="https://www.linkedin.com/in/emilio-araya-213621253">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="mailto:emiliolokillo611@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
   <a href="https://github.com/emilio-araya">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
 </p>
 
