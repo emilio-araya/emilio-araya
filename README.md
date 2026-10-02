@@ -15,7 +15,7 @@
 
 Estudiante de Ingeniería en Informática, enfocado en el desarrollo backend y la arquitectura de aplicaciones.
 
-Me gusta construir soluciones modulares, seguras y escalables, aplicando buenas prácticas de programación y herramientas modernas de desarrollo.
+Diseño y desarrollo sistemas backend con Java y Spring Boot, e infraestructura cloud en AWS con Terraform: microservicios, seguridad OAuth2/JWT y automatización CI/CD, con pruebas automatizadas como parte del flujo de desarrollo.
 
 **En qué estoy enfocado actualmente:**
 
@@ -98,7 +98,6 @@ Backend en Java 17 / Spring Boot 3 con arquitectura por capas para un sistema de
 
 * 🌿 **[Riego automático con Arduino](https://github.com/emilio-araya/riego-automatico-arduino)** — Sistema en C++ que controla una bomba de agua según sensores de humedad, lluvia, luminosidad y temperatura.
 * 🗄️ **[Bases de datos PL/SQL](https://github.com/emilio-araya/programacion-bases-datos-plsql)** — Prácticas en Oracle: cursores, triggers, funciones, procedimientos, packages y SQL dinámico.
-* 📱 **[Aplicaciones Móviles](https://github.com/emilio-araya/Aplicaciones-Moviles)** — Aprendizaje de Kotlin aplicado al desarrollo Android.
 
 ---
 
@@ -179,7 +178,8 @@ Backend en Java 17 / Spring Boot 3 con arquitectura por capas para un sistema de
 </p>
 
 <p align="center">
-  Siempre estoy interesado en aprender nuevas tecnologías y participar en proyectos que me permitan seguir creciendo como desarrollador.
+  Abierto a colaborar en proyectos de backend y cloud.<br/>
+  Si mi perfil te interesa, escríbeme por <a href="https://www.linkedin.com/in/emilio-araya-213621253">LinkedIn</a> o <a href="mailto:emiliolokillo611@gmail.com">correo</a> — respondo rápido.
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,100:1a1b27&height=120&section=footer" width="100%"/>
