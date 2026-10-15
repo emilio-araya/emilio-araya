@@ -13,7 +13,7 @@ Soy estudiante de **Ingeniería en Informática** en Chile, orientado al **desar
 - 🚀 Mi proyecto principal es [Pedidos360](https://github.com/emilio-araya/pedidos360-infra), una plataforma de pedidos con microservicios
 - 👯 Me interesa colaborar en proyectos de backend, cloud y ciberseguridad
 - ✔ Pregúntame sobre Java, Spring Boot, SQL o Docker; con gusto ayudo
-- 📫 Escríbeme a: <a href="mailto:emiliolokillo611@gmail.com">emiliolokillo611@gmail.com</a>
+- 📫 Escríbeme a:emilio.araya.dev@gmail.com
 
 ## Proyectos destacados
 
