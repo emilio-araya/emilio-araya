@@ -13,13 +13,13 @@ Soy estudiante de **Ingeniería en Informática** en Chile, orientado al **desar
 - 🚀 Mi proyecto principal es [Pedidos360](https://github.com/emilio-araya/pedidos360-infra), una plataforma de pedidos con microservicios
 - 👯 Me interesa colaborar en proyectos de backend, cloud y ciberseguridad
 - ✔ Pregúntame sobre Java, Spring Boot, SQL o Docker; con gusto ayudo
-- 📫 Escríbeme a:emilio.araya.dev@gmail.com
+- 📫 Escríbeme a: emilio.araya.dev@gmail.com
 
 ## Proyectos destacados
 
 - 📦 **[Pedidos360](https://github.com/emilio-araya/pedidos360-infra)**: frontend React, un BFF y dos microservicios Spring Boot sobre Oracle. Validación JWT de Entra ID y Cognito, reservas de stock idempotentes con locks pesimistas, Flyway, tests de integración y concurrencia, y Terraform para AWS.
   <br>Repositorios: [infra](https://github.com/emilio-araya/pedidos360-infra) · [bff](https://github.com/emilio-araya/pedidos360-bff) · [catalog](https://github.com/emilio-araya/pedidos360-catalog) · [orders](https://github.com/emilio-araya/pedidos360-orders) · [frontend](https://github.com/emilio-araya/pedidos360-frontend)
-- 🌡️ **[Alerta de temperaturas](https://github.com/emilio-araya/caso1-alerta-temperaturas)**: app Android en Kotlin y Jetpack Compose con MVVM, Room, WorkManager, notificaciones y tests.
+- 🌡️ **[Alerta de temperaturas](https://github.com/emilio-araya/caso1-alerta-temperaturas)**: app Android en Kotlin y Jetpack Compose con MVVM, DataStore, WorkManager, notificaciones y tests.
 - ☸️ **[Innovatech](https://github.com/emilio-araya/proyecto-innovatech)**: proyecto en equipo; hice el pipeline de GitHub Actions hacia ECR y EKS, los Dockerfiles multi-stage y los manifiestos de Kubernetes.
 - 🌱 **[Ecomarket](https://github.com/emilio-araya/ecomarket-spa)**: API REST por capas con Spring Boot, JPA y MariaDB, con tests en CI.
 
@@ -83,6 +83,6 @@ Soy estudiante de **Ingeniería en Informática** en Chile, orientado al **desar
 <a href="https://www.linkedin.com/in/emilio-araya-213621253">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge" alt="LinkedIn">
 </a>
-<a href="mailto:emiliolokillo611@gmail.com">
+<a href="mailto:emilio.araya.dev@gmail.com">
   <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
 </a>
