@@ -33,16 +33,17 @@ Repos: [infra](https://github.com/emilio-araya/pedidos360-infra) · [bff](https:
 | [Alerta de temperaturas](https://github.com/emilio-araya/caso1-alerta-temperaturas) | App Android, Kotlin + Compose, MVVM y DataStore | 24 archivos de test |
 | [Innovatech](https://github.com/emilio-araya/proyecto-innovatech) | Pipeline GitHub Actions → ECR/EKS, Docker y Kubernetes (equipo) | — |
 
-Trabajos de curso: [PL/SQL](https://github.com/emilio-araya/programacion-bases-datos-plsql) · [Arduino](https://github.com/emilio-araya/riego-automatico-arduino).
+Trabajos de curso: [PL/SQL sobre Oracle](https://github.com/emilio-araya/programacion-bases-datos-plsql) · [Arduino](https://github.com/emilio-araya/riego-automatico-arduino).
 
 ## Stack
 
 | | |
 |---|---|
 | Lenguajes | Java · TypeScript · SQL · Kotlin |
-| Backend | Spring Boot · Spring Security · JPA / Hibernate · Maven · Flyway |
+| Backend | Spring Boot · Spring Security (JWT) · JPA / Hibernate · Maven |
+| Bases de datos | Oracle (PL/SQL: funciones, procedimientos, triggers) · MariaDB · Flyway |
 | Frontend | React · Vite |
-| Infraestructura | Docker · Kubernetes · Terraform · AWS · GitHub Actions |
+| Infraestructura | Docker · Kubernetes (manifiestos y despliegue a EKS) · AWS (Terraform: ALB y ECS; CI a ECR, S3 y CloudFront) · GitHub Actions |
 | Testing | JUnit 5 · Mockito · Vitest |
 
 ## Contacto
