@@ -1,55 +1,49 @@
 # Emilio Araya
 
-Estudiante de **Ingeniería en Informática** en Chile, orientado a **backend**: Java, Spring Boot, bases de datos, seguridad de APIs y AWS.
+**Backend · Java + Spring Boot** — estudiante de Ingeniería en Informática, Chile.
 
-**Busco mi primera posición backend (Java / Spring Boot): práctica o junior, remoto o en Santiago.**
+Busco mi primera posición backend: práctica o junior, remoto o en Santiago. Profundizando en concurrencia y transacciones, IAM y networking en AWS, y seguridad de APIs.
 
-Actualmente profundizando en concurrencia y transacciones, IAM y networking en AWS, y seguridad de APIs.
-
-[![CI catalog](https://github.com/emilio-araya/pedidos360-catalog/actions/workflows/ci.yml/badge.svg)](https://github.com/emilio-araya/pedidos360-catalog/actions/workflows/ci.yml)
-[![CI orders](https://github.com/emilio-araya/pedidos360-orders/actions/workflows/ci.yml/badge.svg)](https://github.com/emilio-araya/pedidos360-orders/actions/workflows/ci.yml)
-[![CI bff](https://github.com/emilio-araya/pedidos360-bff/actions/workflows/ci.yml/badge.svg)](https://github.com/emilio-araya/pedidos360-bff/actions/workflows/ci.yml)
-[![CI frontend](https://github.com/emilio-araya/pedidos360-frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/emilio-araya/pedidos360-frontend/actions/workflows/ci.yml)
-[![CI ecomarket](https://github.com/emilio-araya/ecomarket-spa/actions/workflows/ci.yml/badge.svg)](https://github.com/emilio-araya/ecomarket-spa/actions/workflows/ci.yml)
+[![CI](https://github.com/emilio-araya/pedidos360-catalog/actions/workflows/ci.yml/badge.svg)](https://github.com/emilio-araya/pedidos360-catalog/actions/workflows/ci.yml) [![CI](https://github.com/emilio-araya/pedidos360-orders/actions/workflows/ci.yml/badge.svg)](https://github.com/emilio-araya/pedidos360-orders/actions/workflows/ci.yml) [![CI](https://github.com/emilio-araya/pedidos360-bff/actions/workflows/ci.yml/badge.svg)](https://github.com/emilio-araya/pedidos360-bff/actions/workflows/ci.yml) [![CI](https://github.com/emilio-araya/pedidos360-frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/emilio-araya/pedidos360-frontend/actions/workflows/ci.yml) [![CI](https://github.com/emilio-araya/ecomarket-spa/actions/workflows/ci.yml/badge.svg)](https://github.com/emilio-araya/ecomarket-spa/actions/workflows/ci.yml)
 
 ## Pedidos360
 
-Plataforma de pedidos con frontend React, un BFF y dos microservicios Spring Boot sobre Oracle. Validación de
-JWT de Entra ID y Cognito, reservas de stock idempotentes con locks pesimistas, migraciones Flyway, tests de
-integración y de concurrencia, e infraestructura en AWS con Terraform.
-
-[infra](https://github.com/emilio-araya/pedidos360-infra) · [bff](https://github.com/emilio-araya/pedidos360-bff) · [catalog](https://github.com/emilio-araya/pedidos360-catalog) · [orders](https://github.com/emilio-araya/pedidos360-orders) · [frontend](https://github.com/emilio-araya/pedidos360-frontend)
+Plataforma de pedidos: SPA React, un BFF y dos microservicios Spring Boot sobre Oracle. JWT de Entra ID y Cognito, reservas de stock idempotentes con locks pesimistas, Flyway y Terraform en AWS.
 
 | Componente | Responsabilidad | Evidencia |
 |---|---|---|
-| `catalog` | Catálogo de productos y reservas de stock | 30 tests · 84.3% de líneas |
+| `catalog` | Catálogo y reservas de stock | 30 tests · 84.3% líneas |
 | `orders` | Pedidos y liberación de stock | 49 tests |
-| `bff` | Entrada única, propagación de identidad y de `X-Request-Id` | 30 tests |
-| `frontend` | SPA React + Vite + TypeScript | 66 tests · 78.6% de líneas |
+| `bff` | Entrada única e identidad | 30 tests |
+| `frontend` | SPA React + Vite + TypeScript | 66 tests · 78.6% líneas |
 
-## Decisiones de ingeniería
+Repos: [infra](https://github.com/emilio-araya/pedidos360-infra) · [bff](https://github.com/emilio-araya/pedidos360-bff) · [catalog](https://github.com/emilio-araya/pedidos360-catalog) · [orders](https://github.com/emilio-araya/pedidos360-orders) · [frontend](https://github.com/emilio-araya/pedidos360-frontend)
 
-- **La paginación rechaza, no recorta.** Un `size` fuera de rango devuelve `400 INVALID_PAGINATION` en vez de
-  aplicar un límite invisible: si el cliente pide 500 y recibe 100 en silencio, cree que pidió otra cosa. El orden
-  se fija por nombre e id porque sin un `ORDER BY` determinista dos páginas pueden solaparse o saltear filas.
-- **La reserva de stock es idempotente y la cancelación no deja huérfanos.** Se libera stock incluso si el pedido
-  ya no existe; priorizo consistencia sobre disponibilidad y lo documento como una decisión, no como un descuido.
-- **El build de release exige configuración real.** Sin las variables de entorno falla, en vez de publicar un
-  bundle apuntando a `localhost`: que un artefacto compile no significa que sea desplegable.
+### Decisiones
+
+- **La paginación rechaza, no recorta.** Un `size` fuera de rango devuelve `400 INVALID_PAGINATION` en vez de aplicar un límite invisible, y el orden se fija por nombre e id para que dos páginas no se solapen.
+- **La reserva de stock es idempotente y no deja huérfanos.** Se libera stock incluso si el pedido ya no existe: consistencia antes que disponibilidad, como decisión documentada.
+- **El build de release exige configuración real.** Sin variables de entorno falla, en vez de publicar un bundle apuntando a `localhost`.
 
 ## Otros proyectos
 
-- **Ecomarket** — API REST por capas con Spring Boot, JPA y MariaDB; 21 tests y CI contra MariaDB real.
-- **Alerta de temperaturas** — app Android en Kotlin y Jetpack Compose con MVVM, DataStore, WorkManager y
-  notificaciones; 24 archivos de test.
-- **Innovatech** (equipo) — pipeline de GitHub Actions hacia ECR y EKS, Dockerfiles multi-stage y manifiestos de
-  Kubernetes.
-- **Bases de datos (PL/SQL)** y **riego automático (Arduino)** — trabajos de curso, disponibles en el perfil.
+| Proyecto | Qué es | Evidencia |
+|---|---|---|
+| [Ecomarket](https://github.com/emilio-araya/ecomarket-spa) | API REST por capas, Spring Boot + JPA + MariaDB | 21 tests · CI contra MariaDB |
+| [Alerta de temperaturas](https://github.com/emilio-araya/caso1-alerta-temperaturas) | App Android, Kotlin + Compose, MVVM y DataStore | 24 archivos de test |
+| [Innovatech](https://github.com/emilio-araya/proyecto-innovatech) | Pipeline GitHub Actions → ECR/EKS, Docker y Kubernetes (equipo) | — |
+
+Trabajos de curso: [PL/SQL](https://github.com/emilio-araya/programacion-bases-datos-plsql) · [Arduino](https://github.com/emilio-araya/riego-automatico-arduino).
 
 ## Stack
 
-Java · Spring Boot · Spring Security · JPA / Hibernate · Maven · SQL (Oracle, MariaDB) · Flyway · TypeScript ·
-React · Vite · Docker · Kubernetes · Terraform · AWS · GitHub Actions · JUnit 5 · Mockito · Vitest
+| | |
+|---|---|
+| Lenguajes | Java · TypeScript · SQL · Kotlin |
+| Backend | Spring Boot · Spring Security · JPA / Hibernate · Maven · Flyway |
+| Frontend | React · Vite |
+| Infraestructura | Docker · Kubernetes · Terraform · AWS · GitHub Actions |
+| Testing | JUnit 5 · Mockito · Vitest |
 
 ## Contacto
 
