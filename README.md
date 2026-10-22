@@ -20,7 +20,7 @@ Plataforma de pedidos: SPA React, un BFF y dos microservicios Spring Boot sobre 
 
 JWT de Entra ID y Cognito · reservas idempotentes con locks pesimistas · Flyway
 
-<sub>![catalog](https://github.com/emilio-araya/pedidos360-catalog/actions/workflows/ci.yml/badge.svg?style=flat-square) ![orders](https://github.com/emilio-araya/pedidos360-orders/actions/workflows/ci.yml/badge.svg?style=flat-square) ![bff](https://github.com/emilio-araya/pedidos360-bff/actions/workflows/ci.yml/badge.svg?style=flat-square) ![frontend](https://github.com/emilio-araya/pedidos360-frontend/actions/workflows/ci.yml/badge.svg?style=flat-square) ![ecomarket](https://github.com/emilio-araya/ecomarket-spa/actions/workflows/ci.yml/badge.svg?style=flat-square)</sub>
+<sub>![catalog](https://github.com/emilio-araya/pedidos360-catalog/actions/workflows/ci.yml/badge.svg?style=flat-square&label=catalog) ![orders](https://github.com/emilio-araya/pedidos360-orders/actions/workflows/ci.yml/badge.svg?style=flat-square&label=orders) ![bff](https://github.com/emilio-araya/pedidos360-bff/actions/workflows/ci.yml/badge.svg?style=flat-square&label=bff) ![frontend](https://github.com/emilio-araya/pedidos360-frontend/actions/workflows/ci.yml/badge.svg?style=flat-square&label=frontend) ![ecomarket](https://github.com/emilio-araya/ecomarket-spa/actions/workflows/ci.yml/badge.svg?style=flat-square&label=ecomarket)</sub>
 
 ### Tres decisiones
 
