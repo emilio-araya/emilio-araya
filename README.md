@@ -23,6 +23,8 @@ Soy estudiante de **Ingeniería en Informática** en Chile, orientado al **desar
 - 🌡️ **[Alerta de temperaturas](https://github.com/emilio-araya/caso1-alerta-temperaturas)**: app Android en Kotlin y Jetpack Compose con MVVM, DataStore, WorkManager, notificaciones y 24 archivos de test.
 - ☸️ **[Innovatech](https://github.com/emilio-araya/proyecto-innovatech)**: proyecto en equipo; hice el pipeline de GitHub Actions hacia ECR y EKS, los Dockerfiles multi-stage, los manifiestos de Kubernetes y el despliegue a EKS.
 - 🌱 **[Ecomarket](https://github.com/emilio-araya/ecomarket-spa)**: API REST por capas con Spring Boot, JPA y MariaDB, con 21 tests en CI.
+- 🛹 **[Performance Skateshop](https://github.com/emilio-araya/performance-skateshop)**: e-commerce con React 19 y Context API, 49 tests con Vitest y despliegue en AWS con Terraform (VPC, EC2 y nginx).
+- 🖥️ **[Portafolio](https://emilio-araya.github.io)**: sitio personal y CV en HTML, CSS y JavaScript sobre GitHub Pages.
 
 ## Mis habilidades
 
@@ -81,6 +83,9 @@ Soy estudiante de **Ingeniería en Informática** en Chile, orientado al **desar
 
 ## Contacto
 
+<a href="https://emilio-araya.github.io">
+  <img src="https://img.shields.io/badge/Portafolio-000000?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portafolio">
+</a>
 <a href="https://www.linkedin.com/in/emilio-araya-213621253">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge" alt="LinkedIn">
 </a>
