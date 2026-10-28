@@ -1,8 +1,6 @@
-<h1 align="center"><b>Hola, soy Emilio Araya</b> <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"></h1>
+<h1 align="center">Hola, soy Emilio Araya</h1>
 
-<img align="right" width="300" alt="Programando" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" />
-
-<img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px">&nbsp;***Sobre mí***
+## Sobre mí
 
 Estudiante de **Ingeniería en Informática** (Duoc UC, Chile), orientado al desarrollo backend. Me interesa lo que pasa cuando un sistema deja de ser un CRUD: concurrencia, consistencia de datos, autenticación entre servicios e infraestructura reproducible.
 
@@ -11,22 +9,21 @@ Estudiante de **Ingeniería en Informática** (Duoc UC, Chile), orientado al des
   - Spring Security, OAuth2 y OpenID Connect
   - Concurrencia, transacciones y niveles de aislamiento
   - AWS (networking e IAM) y Terraform
-- 🚀 Mi proyecto principal es [Pedidos360](https://github.com/emilio-araya/pedidos360-orders), una plataforma de pedidos con microservicios
+- 🚀 Mi proyecto principal es [Pedidos360](https://github.com/emilio-araya/pedidos360-infra), una plataforma de pedidos con microservicios
 - 👯 Me interesa colaborar en proyectos de backend, cloud y ciberseguridad
 - ✔ Pregúntame sobre Java, Spring Boot, SQL o Docker; con gusto ayudo
 - 📫 Escríbeme a: [emilio.araya.dev@gmail.com](mailto:emilio.araya.dev@gmail.com)
 
 ## Proyectos destacados
 
-- 📦 **[Pedidos360](https://github.com/emilio-araya/pedidos360-orders)**: frontend React, un BFF y dos microservicios Spring Boot sobre Oracle. Validación JWT de Entra ID y Cognito, reservas de stock idempotentes con locks pesimistas, Flyway, tests de integración y concurrencia, y Terraform para AWS.
-  <br>Repositorios: [orders](https://github.com/emilio-araya/pedidos360-orders) · [bff](https://github.com/emilio-araya/pedidos360-bff) · [catalog](https://github.com/emilio-araya/pedidos360-catalog) · [frontend](https://github.com/emilio-araya/pedidos360-frontend) · [infra](https://github.com/emilio-araya/pedidos360-infra)
+- 📦 **[Pedidos360](https://github.com/emilio-araya/pedidos360-infra)**: frontend React, un BFF y dos microservicios Spring Boot sobre Oracle. Validación JWT de Entra ID y Cognito, reservas de stock idempotentes con locks pesimistas, Flyway, tests de integración y concurrencia, y Terraform para AWS.
+  <br>Repositorios: [infra](https://github.com/emilio-araya/pedidos360-infra) · [bff](https://github.com/emilio-araya/pedidos360-bff) · [catalog](https://github.com/emilio-araya/pedidos360-catalog) · [orders](https://github.com/emilio-araya/pedidos360-orders) · [frontend](https://github.com/emilio-araya/pedidos360-frontend)
 - 🛹 **[Performance Skateshop](https://github.com/emilio-araya/performance-skateshop)**: e-commerce con React 19 y Context API, 49 tests con Vitest y despliegue en AWS con Terraform (VPC, EC2 y nginx).
-- ☸️ **[Innovatech](https://github.com/emilio-araya/proyecto-innovatech)**: plataforma en Amazon EKS con dos microservicios Spring Boot y un frontend React. Pipeline de GitHub Actions hacia ECR y EKS, Dockerfiles multi-stage, manifiestos de Kubernetes y stack local con Docker Compose.
 - 🌡️ **[Alerta de temperaturas](https://github.com/emilio-araya/caso1-alerta-temperaturas)**: app Android en Kotlin y Jetpack Compose con MVVM, DataStore, WorkManager, notificaciones y 122 tests.
 - 🌱 **[Ecomarket](https://github.com/emilio-araya/ecomarket-spa)**: API REST de productos ecológicos con Spring Boot, JPA, MariaDB, HATEOAS y OpenAPI. 21 tests en CI.
 - 🖥️ **[Portafolio](https://emilio-araya.github.io)**: sitio personal y CV en HTML, CSS y JavaScript sobre GitHub Pages.
 
-También: [Riego automático con Arduino](https://github.com/emilio-araya/riego-automatico-arduino) · [Oracle SQL y PL/SQL](https://github.com/emilio-araya/programacion-bases-datos-plsql)
+También: [Riego automático con Arduino](https://github.com/emilio-araya/riego-automatico-arduino)
 
 ## Mis habilidades
 
@@ -83,8 +80,6 @@ También: [Riego automático con Arduino](https://github.com/emilio-araya/riego-
 </a>
 <a href="https://www.linkedin.com/in/emilio-araya-213621253">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-</a>
-
 </a>
 <a href="mailto:emilio.araya.dev@gmail.com">
   <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
