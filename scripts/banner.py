@@ -11,7 +11,7 @@ Inputs:
     data/profile.json           the YAML rows shown in the editor panel
 
 Outputs:
-    assets/banner-dark.svg, assets/banner-light.svg
+    assets/banner-dark.vN.svg, assets/banner-light.vN.svg (N = BANNER_VERSION; update README.md)
 
 The portrait is converted to a 1-bit Floyd-Steinberg dither and drawn as a single
 SVG path, revealed by a scanline. The YAML rows then appear one by one.
@@ -30,6 +30,10 @@ ROOT = Path(__file__).resolve().parents[1]
 PORTRAIT = ROOT / "assets/source/portrait.png"
 PROFILE = ROOT / "data/profile.json"
 ASSETS = ROOT / "assets"
+
+# Bump on every visual change: GitHub and browsers cache images by URL,
+# so a new file name is what makes the profile show the new banner.
+BANNER_VERSION = 2
 
 W, H = 1180, 610
 MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
@@ -285,7 +289,7 @@ def render(theme: str, profile: dict) -> str:
 def main() -> None:
     profile = json.loads(PROFILE.read_text(encoding="utf-8"))
     for theme in THEMES:
-        target = ASSETS / f"banner-{theme}.svg"
+        target = ASSETS / f"banner-{theme}.v{BANNER_VERSION}.svg"
         target.write_text(render(theme, profile), encoding="utf-8")
         print(f"wrote {target.relative_to(ROOT)} ({target.stat().st_size // 1024} KiB)")
 
