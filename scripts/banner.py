@@ -35,10 +35,20 @@ W, H = 1180, 610
 MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
 
 # Portrait grid: GRID_W x GRID_H dither cells, each drawn CELL px apart.
-GRID_W, GRID_H, CELL = 240, 272, 1.4
+GRID_W, GRID_H, CELL = 240, 255, 1.4
 FRAME_X, FRAME_Y, FRAME_W, FRAME_H = 49, 124, 390, 414
 REVEAL_SECONDS = 2.4
 ROW_START, ROW_STEP = 0.8, 0.14
+
+# Shell commands that scroll clockwise around the portrait, one string per edge.
+FRAME_COMMANDS = {
+    "top": "whoami ; id -un ; uname -srm ; uptime -p ; hostnamectl --static ; echo $SHELL",
+    "right": "grep -rn '@Transactional' src/ | wc -l ; git log --oneline -5 ; git status -sb",
+    "bottom": "docker compose up -d ; kubectl get pods -A ; terraform plan -out=tf.plan",
+    "left": "tail -f /var/log/app.log | grep -i error ; journalctl -u app -n 50 ; ss -tlnp",
+}
+FRAME_BAND, FRAME_FONT, FRAME_CHAR = 16, 10, 6.02
+FRAME_SPEED = 22  # px per second
 
 # Pedidos360 repositories shown in the side panel, with their main technology.
 SERVICES = [("frontend", "React"), ("bff", "Spring"), ("catalog", "Spring"),
@@ -92,7 +102,7 @@ def portrait_cells(theme: str) -> np.ndarray:
     gray = ImageEnhance.Contrast(gray).enhance(1.3)
     if theme == "dark":
         # Lit cells carry the image on dark: pull midtones down so skin is not a solid block.
-        gray = gray.point(lambda v: round(255 * (v / 255) ** 1.6))
+        gray = gray.point(lambda v: round(255 * (v / 255) ** 1.25))
     gray = gray.filter(ImageFilter.UnsharpMask(radius=2, percent=170, threshold=1))
     white = floyd_steinberg(np.asarray(gray))
     cells = white if theme == "dark" else ~white
@@ -119,6 +129,53 @@ def text(x: float, y: float, body: str, fill: str, size: int = 13, weight: str =
          anchor: str = "start", extra: str = "") -> str:
     return (f'<text x="{x:g}" y="{y:g}" fill="{fill}" font-family="{MONO}" font-size="{size}" '
             f'font-weight="{weight}" text-anchor="{anchor}"{extra}>{escape(body)}</text>')
+
+
+def command_marquee(key: str, x: float, y: float, length: float, angle: int, forward: bool,
+                    c: dict) -> str:
+    """One frame edge: a looping strip of shell commands clipped to the edge.
+
+    The local x axis runs along the edge after rotation; ``forward`` scrolls towards +x.
+    Two identical copies with a forced textLength make the loop seamless.
+    """
+    body = FRAME_COMMANDS[key]
+    copy = f"$ {body} ; "
+    while len(copy) * FRAME_CHAR < length:
+        copy += copy
+    span = len(copy) * FRAME_CHAR
+    values = f"{-span:g} 0;0 0" if forward else f"0 0;{-span:g} 0"
+
+    def strip(offset: float) -> str:
+        prompt, rest = copy.split(" ", 1)
+        return (f'<text x="{offset:g}" y="0" font-family="{MONO}" font-size="{FRAME_FONT}" '
+                f'textLength="{span:g}" lengthAdjust="spacing" fill="{c["muted"]}">'
+                f'<tspan fill="{c["ok"]}" font-weight="700">{escape(prompt)}</tspan> '
+                f'{escape(rest)}</text>')
+
+    return (
+        f'<g transform="translate({x:g} {y:g}) rotate({angle})">'
+        f'<clipPath id="edge-{key}"><rect x="0" y="{-FRAME_BAND + 4}" width="{length:g}" '
+        f'height="{FRAME_BAND}"/></clipPath>'
+        f'<g clip-path="url(#edge-{key})"><g>'
+        f'<animateTransform attributeName="transform" type="translate" values="{values}" '
+        f'dur="{span / FRAME_SPEED:.1f}s" repeatCount="indefinite"/>'
+        f'{strip(0)}{strip(span)}</g></g></g>'
+    )
+
+
+def command_frame(c: dict) -> str:
+    """Four scrolling edges around the portrait, flowing clockwise."""
+    x0, y0, w, h = FRAME_X, FRAME_Y, FRAME_W, FRAME_H
+    inner_w, inner_h = w - 2 * FRAME_BAND, h - 2 * FRAME_BAND
+    baseline = FRAME_BAND - 4
+    return "".join([
+        f'<rect x="{x0 + FRAME_BAND:g}" y="{y0 + FRAME_BAND:g}" width="{inner_w:g}" '
+        f'height="{inner_h:g}" fill="none" stroke="{c["line"]}"/>',
+        command_marquee("top", x0, y0 + baseline, w, 0, True, c),
+        command_marquee("right", x0 + w - baseline, y0 + FRAME_BAND, inner_h, 90, True, c),
+        command_marquee("bottom", x0, y0 + h - 4, w, 0, False, c),
+        command_marquee("left", x0 + baseline, y0 + h - FRAME_BAND, inner_h, -90, True, c),
+    ])
 
 
 def render(theme: str, profile: dict) -> str:
@@ -148,8 +205,9 @@ def render(theme: str, profile: dict) -> str:
         # Portrait panel.
         f'<rect x="35" y="88" width="418" height="472" rx="6" fill="{c["panel2"]}" stroke="{c["line"]}"/>',
         f'<path d="M35 124H453" stroke="{c["line"]}"/>',
-        text(49, 111, "PORTRAIT.DITHER", c["chrome"], 13, "700", extra=' letter-spacing="1.2"'),
-        text(438, 111, f"{GRID_W}×{GRID_H} / 1-BIT", c["muted"], 11, anchor="end"),
+        text(49, 111, "~/me.jpg", c["chrome"], 13, "700", extra=' letter-spacing="1.2"'),
+        text(438, 111, f"{GRID_W}×{GRID_H} · 1-bit · {len(FRAME_COMMANDS)} ttys", c["muted"], 11, anchor="end"),
+        command_frame(c),
         f'<g clip-path="url(#reveal)"><path transform="translate({px:g} {py + 0.4 * CELL:g}) '
         f'scale({CELL})" d="{cells_path(portrait_cells(theme))}" fill="none" stroke="{c["ink"]}" '
         f'stroke-width=".8"/></g>',
@@ -158,7 +216,7 @@ def render(theme: str, profile: dict) -> str:
         f'<animate attributeName="y" values="{py - 18:g};{py + grid_h - 18:g}" dur="{REVEAL_SECONDS}s" '
         f'fill="freeze"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;.9;1" '
         f'dur="{REVEAL_SECONDS}s" fill="freeze"/></rect>',
-        text(58, 551, "FLOYD-STEINBERG · SERPENTINE", c["muted"], 10),
+        text(49, 553, "$ magick me.jpg -dither FloydSteinberg -monochrome me.svg", c["muted"], 10),
     ]
 
     # Editor panel.
