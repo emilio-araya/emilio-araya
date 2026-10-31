@@ -1,0 +1,18 @@
+{
+  "_comment": "Bytes per language over public non-fork repositories. Regenerate with: python3 scripts/charts.py --refresh-languages",
+  "user": "emilio-araya",
+  "bytes": {
+    "Java": 589194,
+    "Kotlin": 323144,
+    "TypeScript": 285639,
+    "JavaScript": 181456,
+    "CSS": 137162,
+    "HCL": 122828,
+    "HTML": 43541,
+    "Shell": 30289,
+    "PLSQL": 8019,
+    "Dockerfile": 3711,
+    "C++": 3233,
+    "Python": 1332
+  }
+}

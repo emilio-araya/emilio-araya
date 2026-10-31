@@ -1,0 +1,12 @@
+{
+  "title": "Backend Skill Radar",
+  "_comment": "Self-assessed, 0-100. Edit the values and run: python3 scripts/charts.py",
+  "axes": [
+    {"label": "Java & Spring Boot", "value": 80},
+    {"label": "API Security", "value": 70},
+    {"label": "SQL & Data Modeling", "value": 75},
+    {"label": "Testing", "value": 72},
+    {"label": "AWS & Terraform", "value": 65},
+    {"label": "Docker & CI/CD", "value": 68}
+  ]
+}

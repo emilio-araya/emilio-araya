@@ -1,0 +1,33 @@
+{
+  "handle": "emilio-araya",
+  "name": "Emilio Araya",
+  "role": "Backend Developer",
+  "location": "Chile",
+  "timezone": "America/Santiago",
+  "mission": "backends that stay correct under load",
+  "status": "open to internship · junior roles",
+  "yaml": [
+    [0, "profile", ""],
+    [1, "name", "Emilio Araya"],
+    [1, "role", "Backend Developer"],
+    [1, "studies", "Computer Engineering · Duoc UC"],
+    [1, "location", "Chile · remote or Santiago"],
+    [1, "focus", "Concurrency · Consistency · AuthN/AuthZ"],
+    [1, "flagship", "Pedidos360 · microservices on AWS"],
+    [0, "stack", ""],
+    [1, "backend", "Java · Spring Boot · Spring Security"],
+    [1, "data", "Oracle · MariaDB · MySQL · Flyway"],
+    [1, "cloud", "AWS · Terraform · Docker · K8s"],
+    [1, "testing", "JUnit 5 · Mockito · Vitest"],
+    [1, "learning", "OAuth2 · OIDC · isolation levels"],
+    [0, "contact", ""],
+    [1, "email", "emilio.araya.dev@gmail.com"],
+    [1, "github", "emilio-araya"],
+    [1, "web", "emilio-araya.github.io"]
+  ],
+  "expertise": [
+    ["backend/", "Java 17 · Spring Boot 3 · REST · JPA"],
+    ["security/", "OAuth2 Resource Server · JWT · Entra ID"],
+    ["infra/", "AWS · Terraform · Docker · CI/CD"]
+  ]
+}

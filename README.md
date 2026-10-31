@@ -1,20 +1,40 @@
-<h1 align="center">Hola, soy Emilio Araya</h1>
+<div align="center">
 
-## Sobre mí
+<a href="https://github.com/emilio-araya">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
+    <img src="assets/banner-light.svg" width="960" alt="Perfil backend de Emilio Araya: retrato en puntos y profile.yaml">
+  </picture>
+</a>
+
+<br>
+
+<a href="https://github.com/emilio-araya">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&amp;weight=700&amp;size=24&amp;duration=2600&amp;pause=900&amp;color=6DB33F&amp;center=true&amp;vCenter=true&amp;width=900&amp;lines=Emilio+Araya+%E2%80%94+Backend+Developer%3BJava+%7C+Spring+Boot+%7C+Spring+Security%3BAWS+%E2%80%A2+Terraform+%E2%80%A2+Docker%3BConcurrencia+%C2%B7+Consistencia+%C2%B7+Infra+reproducible" alt="Texto animado: Emilio Araya, Backend Developer">
+</a>
+
+<img src="https://komarev.com/ghpvc/?username=emilio-araya&style=flat&color=6db33f&label=profile+views" alt="Visitas al perfil">
+
+</div>
+
+---
+
+## `$ whoami`
+
+<p align="center">
+  <img src="assets/whoami.svg" width="960" alt="Tarjeta de terminal: Emilio Araya, Backend Developer en Chile">
+</p>
 
 Estudiante de **Ingeniería en Informática** (Duoc UC, Chile), orientado al desarrollo backend. Me interesa lo que pasa cuando un sistema deja de ser un CRUD: concurrencia, consistencia de datos, autenticación entre servicios e infraestructura reproducible.
 
 - 🎯 Busco mi primera posición backend: práctica o junior, remoto o en Santiago
-- 🌱 Actualmente estoy profundizando en...
-  - Spring Security, OAuth2 y OpenID Connect
-  - Concurrencia, transacciones y niveles de aislamiento
-  - AWS (networking e IAM) y Terraform
-- 🚀 Mi proyecto principal es [Pedidos360](https://github.com/emilio-araya/pedidos360-infra), una plataforma de pedidos con microservicios
+- 🌱 Profundizando en Spring Security, OAuth2 y OpenID Connect; concurrencia y niveles de aislamiento; AWS (networking e IAM) y Terraform
 - 👯 Me interesa colaborar en proyectos de backend, cloud y ciberseguridad
-- ✔ Pregúntame sobre Java, Spring Boot, SQL o Docker; con gusto ayudo
-- 📫 Escríbeme a: [emilio.araya.dev@gmail.com](mailto:emilio.araya.dev@gmail.com)
 
-## Proyectos destacados
+---
+
+## `$ ls ~/projects`
 
 - 📦 **[Pedidos360](https://github.com/emilio-araya/pedidos360-infra)**: frontend React, un BFF y dos microservicios Spring Boot sobre Oracle. Validación JWT de Entra ID y Cognito, reservas de stock idempotentes con locks pesimistas, Flyway, tests de integración y concurrencia, y Terraform para AWS.
   <br>Repositorios: [infra](https://github.com/emilio-araya/pedidos360-infra) · [bff](https://github.com/emilio-araya/pedidos360-bff) · [catalog](https://github.com/emilio-araya/pedidos360-catalog) · [orders](https://github.com/emilio-araya/pedidos360-orders) · [frontend](https://github.com/emilio-araya/pedidos360-frontend)
@@ -25,62 +45,103 @@ Estudiante de **Ingeniería en Informática** (Duoc UC, Chile), orientado al des
 
 También: [Riego automático con Arduino](https://github.com/emilio-araya/riego-automatico-arduino)
 
-## Mis habilidades
+<div align="center">
 
-<h4> Lenguajes </h4>
-<span>
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
-  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin">
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/SQL%20%2F%20PL%2FSQL-F80000?style=for-the-badge" alt="SQL y PL/SQL">
-  <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino">
-</span>
+## `$ cat tech-stack.yaml`
 
-<h4> Backend y datos </h4>
-<span>
-  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot">
-  <img src="https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white" alt="Spring Security">
-  <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white" alt="Hibernate">
-  <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven">
-  <img src="https://img.shields.io/badge/Oracle_(PL%2FSQL)-F80000?style=for-the-badge" alt="Oracle PL/SQL">
-  <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white" alt="MariaDB">
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-  <img src="https://img.shields.io/badge/Flyway-CC0200?style=for-the-badge&logo=flyway&logoColor=white" alt="Flyway">
-</span>
+<table border="1" cellpadding="14">
+  <thead>
+    <tr>
+      <th colspan="2" align="left"><code>emilio-araya:~$ cat tech-stack.yaml</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="50%" valign="top"><code>├─ ☕ backend:</code><br><br>
+        <img src="https://skillicons.dev/icons?i=java,spring,hibernate,maven" alt="Java, Spring, Hibernate y Maven">
+        <img src="https://cdn.simpleicons.org/springsecurity/6DB33F?viewbox=auto" height="48" alt="Spring Security"><br>
+        <sub><code>Java · Spring Boot · Spring Security · Hibernate · Maven</code></sub>
+      </td>
+      <td width="50%" valign="top"><code>├─ ▣ databases:</code><br><br>
+        <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL">
+        <img src="https://cdn.simpleicons.org/mariadb/4FC3F7?viewbox=auto" height="48" alt="MariaDB">
+        <img src="https://cdn.simpleicons.org/flyway/CC0200?viewbox=auto" height="48" alt="Flyway"><br>
+        <sub><code>Oracle (PL/SQL) · MySQL · MariaDB · Flyway</code></sub>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><code>├─ ☁ cloud_devops:</code><br><br>
+        <img src="https://skillicons.dev/icons?i=aws,terraform,docker,kubernetes,githubactions" alt="AWS, Terraform, Docker, Kubernetes y GitHub Actions"><br>
+        <sub><code>AWS · Terraform · Docker · Kubernetes · GitHub Actions</code></sub>
+      </td>
+      <td valign="top"><code>├─ ✦ languages_frontend:</code><br><br>
+        <img src="https://skillicons.dev/icons?i=kotlin,ts,js,react,vite" alt="Kotlin, TypeScript, JavaScript, React y Vite"><br>
+        <sub><code>Kotlin · TypeScript · JavaScript · React · Vite</code></sub>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><code>├─ ✔ testing:</code><br><br>
+        <img src="https://cdn.simpleicons.org/junit5/25A162?viewbox=auto" height="48" alt="JUnit 5">
+        <img src="https://skillicons.dev/icons?i=vitest" alt="Vitest"><br>
+        <sub><code>JUnit 5 · Mockito · Vitest</code></sub>
+      </td>
+      <td valign="top"><code>╰─ ⌁ tools:</code><br><br>
+        <img src="https://skillicons.dev/icons?i=git,linux,bash,arduino" alt="Git, Linux, Bash y Arduino"><br>
+        <sub><code>Git · Linux · Bash · Arduino</code></sub>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2"><code>status: learning&nbsp;&nbsp;·&nbsp;&nbsp;environment: Chile (UTC-3/-4)</code></td>
+    </tr>
+  </tfoot>
+</table>
 
-<h4> Cloud y DevOps </h4>
-<span>
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge" alt="AWS">
-  <img src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes">
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions">
-</span>
+</div>
 
-<h4> Frontend y testing </h4>
-<span>
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
-  <img src="https://img.shields.io/badge/JUnit_5-25A162?style=for-the-badge&logo=junit5&logoColor=white" alt="JUnit 5">
-  <img src="https://img.shields.io/badge/Mockito-78A641?style=for-the-badge" alt="Mockito">
-  <img src="https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white" alt="Vitest">
-</span>
+---
 
-<h4> Otras herramientas </h4>
-<span>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
-</span>
+## `$ curl -s api.github.com/users/emilio-araya/signals`
 
-## Contacto
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/radar-skills-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/radar-skills-light.svg">
+    <img src="assets/radar-skills-light.svg" width="420" alt="Radar de habilidades backend (autoevaluación)">
+  </picture>&nbsp;
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/radar-langs-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">
+    <img src="assets/radar-langs-light.svg" width="420" alt="Radar de lenguajes por porcentaje de código en mis repositorios">
+  </picture>
+</p>
+
+<p align="center"><sub><code>skills: autoevaluación · languages: bytes por lenguaje en mis repos públicos</code></sub></p>
+
+---
+
+## `$ connect --socials`
+
+<div align="center">
 
 <a href="https://emilio-araya.github.io">
-  <img src="https://img.shields.io/badge/Portafolio-000000?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portafolio">
-</a>
+  <img src="https://img.shields.io/badge/Portafolio-6DB33F?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portafolio">
+</a>&nbsp;&nbsp;
 <a href="https://www.linkedin.com/in/emilio-araya-213621253">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-</a>
+</a>&nbsp;&nbsp;
 <a href="mailto:emilio.araya.dev@gmail.com">
   <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
+</a>&nbsp;&nbsp;
+<a href="https://github.com/emilio-araya">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
 </a>
+
+</div>
+
+<br>
+
+<div align="center">
+<sub>Hecho con ☕ y mucho Java desde Chile · @emilio-araya · <a href="scripts/">cómo se generan las imágenes</a></sub>
+</div>
