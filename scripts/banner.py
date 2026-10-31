@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the animated profile banner (dark and light) from a portrait photo.
+"""Render the animated profile banner (dark and light) with a dithered monogram.
 
 Run from the repository root:
 
@@ -7,14 +7,13 @@ Run from the repository root:
     .venv/bin/python scripts/banner.py
 
 Inputs:
-    assets/source/portrait.png  head-and-shoulders photo with a transparent background
     data/profile.json           the YAML rows shown in the editor panel
 
 Outputs:
     assets/banner-dark.vN.svg, assets/banner-light.vN.svg (N = BANNER_VERSION; update README.md)
 
-The portrait is converted to a 1-bit Floyd-Steinberg dither and drawn as a single
-SVG path, revealed by a scanline. The YAML rows then appear one by one.
+The initials are drawn with a shaded fill, converted to a 1-bit Floyd-Steinberg
+dither and drawn as a single SVG path, revealed by a scanline. The YAML rows then appear one by one.
 """
 
 from __future__ import annotations
@@ -24,27 +23,27 @@ from html import escape
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageFilter, ImageOps
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
-PORTRAIT = ROOT / "assets/source/portrait.png"
+MONOGRAM = "EA"
 PROFILE = ROOT / "data/profile.json"
 ASSETS = ROOT / "assets"
 
 # Bump on every visual change: GitHub and browsers cache images by URL,
 # so a new file name is what makes the profile show the new banner.
-BANNER_VERSION = 6
+BANNER_VERSION = 7
 
 W, H = 1180, 610
 MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
 
-# Portrait grid: GRID_W x GRID_H dither cells, each drawn CELL px apart.
+# Monogram grid: GRID_W x GRID_H dither cells, each drawn CELL px apart.
 GRID_W, GRID_H, CELL = 240, 255, 1.4
 FRAME_X, FRAME_Y, FRAME_W, FRAME_H = 49, 124, 390, 414
 REVEAL_SECONDS = 2.4
 ROW_START, ROW_STEP = 0.8, 0.14
 
-# Shell commands that scroll clockwise around the portrait, one string per edge.
+# Shell commands that scroll clockwise around the monogram, one string per edge.
 FRAME_COMMANDS = {
     "top": "whoami ; id -un ; uname -srm ; uptime -p ; hostnamectl --static ; echo $SHELL",
     "right": "grep -rn '@Transactional' src/ | wc -l ; git log --oneline -5 ; git status -sb",
@@ -95,23 +94,20 @@ def floyd_steinberg(gray: np.ndarray) -> np.ndarray:
     return out
 
 
-def portrait_cells(theme: str) -> np.ndarray:
-    """Boolean grid of cells to draw: light areas on dark, dark areas on light."""
-    source = Image.open(PORTRAIT).convert("RGBA").resize((GRID_W, GRID_H), Image.Resampling.LANCZOS)
-    alpha = np.asarray(source.getchannel("A"), dtype=np.float32) / 255.0
-    backdrop = Image.new("RGBA", source.size, "black" if theme == "dark" else "white")
-    backdrop.alpha_composite(source)
-    subject = alpha > 0.1
-    gray = ImageOps.grayscale(backdrop.convert("RGB"))
-    # Equalize over the subject only: flat webcam lighting otherwise dithers the face to one tone.
-    gray = ImageOps.equalize(gray, mask=Image.fromarray((subject * 255).astype("uint8")))
-    if theme == "dark":
-        # Lit cells carry the image on dark: pull midtones down so skin is not a solid block.
-        gray = gray.point(lambda v: round(255 * (v / 255) ** 1.3))
-    gray = gray.filter(ImageFilter.UnsharpMask(radius=2, percent=170, threshold=1))
-    white = floyd_steinberg(np.asarray(gray))
-    cells = white if theme == "dark" else ~white
-    return cells & subject
+def monogram_cells(theme: str) -> np.ndarray:
+    """Boolean grid of cells to draw: the initials with a top-lit shaded fill."""
+    font = ImageFont.load_default(size=int(GRID_H * 0.62))
+    mask = Image.new("L", (GRID_W, GRID_H), 0)
+    draw = ImageDraw.Draw(mask)
+    left, top, right, bottom = draw.textbbox((0, 0), MONOGRAM, font=font, stroke_width=3)
+    origin = ((GRID_W - (right - left)) / 2 - left, (GRID_H - (bottom - top)) / 2 - top)
+    draw.text(origin, MONOGRAM, fill=255, font=font, stroke_width=3, stroke_fill=255)
+    letters = np.asarray(mask) > 127
+    # Bright at the top, dimmer at the bottom: the dither turns the ramp into texture.
+    ramp = np.linspace(1.0, 0.35, GRID_H, dtype=np.float32)[:, None] * np.ones((1, GRID_W))
+    shade = Image.fromarray((ramp * 255).astype("uint8"))
+    white = floyd_steinberg(np.asarray(shade))
+    return letters & white
 
 
 def cells_path(cells: np.ndarray) -> str:
@@ -169,7 +165,7 @@ def command_marquee(key: str, x: float, y: float, length: float, angle: int, for
 
 
 def command_frame(c: dict) -> str:
-    """Four scrolling edges around the portrait, flowing clockwise."""
+    """Four scrolling edges around the monogram, flowing clockwise."""
     x0, y0, w, h = FRAME_X, FRAME_Y, FRAME_W, FRAME_H
     inner_w, inner_h = w - 2 * FRAME_BAND, h - 2 * FRAME_BAND
     baseline = FRAME_BAND - 4
@@ -193,7 +189,7 @@ def render(theme: str, profile: dict) -> str:
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
         f'role="img" aria-labelledby="title desc">',
         f'<title id="title">{escape(profile["name"])} — {escape(profile["role"])}</title>',
-        '<desc id="desc">Animated terminal banner with a dithered portrait and a YAML profile.</desc>',
+        '<desc id="desc">Animated terminal banner with a dithered monogram and a YAML profile.</desc>',
         f'<defs><clipPath id="reveal"><rect x="{px:g}" y="{py:g}" width="{grid_w:g}" height="0">'
         f'<animate attributeName="height" from="0" to="{grid_h:g}" dur="{REVEAL_SECONDS}s" '
         f'fill="freeze"/></rect></clipPath>'
@@ -207,21 +203,21 @@ def render(theme: str, profile: dict) -> str:
         '<circle cx="38" cy="38" r="6" fill="#FF5F57"/><circle cx="59" cy="38" r="6" '
         'fill="#FEBC2E"/><circle cx="80" cy="38" r="6" fill="#28C840"/>',
         text(W / 2, 43, "vim ~/profile.yaml", c["muted"], 13, anchor="middle"),
-        # Portrait panel.
+        # Monogram panel.
         f'<rect x="35" y="88" width="418" height="472" rx="6" fill="{c["panel2"]}" stroke="{c["line"]}"/>',
         f'<path d="M35 124H453" stroke="{c["line"]}"/>',
-        text(49, 111, "~/me.jpg", c["chrome"], 13, "700", extra=' letter-spacing="1.2"'),
+        text(49, 111, "~/.signature", c["chrome"], 13, "700", extra=' letter-spacing="1.2"'),
         text(438, 111, f"{GRID_W}×{GRID_H} · 1-bit · {len(FRAME_COMMANDS)} ttys", c["muted"], 11, anchor="end"),
         command_frame(c),
         f'<g clip-path="url(#reveal)"><path transform="translate({px:g} {py + 0.4 * CELL:g}) '
-        f'scale({CELL})" d="{cells_path(portrait_cells(theme))}" fill="none" stroke="{c["ink"]}" '
+        f'scale({CELL})" d="{cells_path(monogram_cells(theme))}" fill="none" stroke="{c["ink"]}" '
         f'stroke-width=".8"/></g>',
         # Scanline: sweeps once with the reveal, then idles as a faint periodic sweep.
         f'<rect x="{px:g}" y="{py:g}" width="{grid_w:g}" height="18" fill="url(#scan)" opacity="0">'
         f'<animate attributeName="y" values="{py - 18:g};{py + grid_h - 18:g}" dur="{REVEAL_SECONDS}s" '
         f'fill="freeze"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;.9;1" '
         f'dur="{REVEAL_SECONDS}s" fill="freeze"/></rect>',
-        text(49, 553, "$ magick me.jpg -dither FloydSteinberg -monochrome me.svg", c["muted"], 10),
+        text(49, 553, f"$ figlet -f banner {MONOGRAM} | tee ~/.signature", c["muted"], 10),
     ]
 
     # Editor panel.
