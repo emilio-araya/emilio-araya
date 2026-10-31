@@ -2,9 +2,9 @@
 
 <a href="https://github.com/emilio-araya">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.v5.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.v5.svg">
-    <img src="assets/banner-light.v5.svg" width="960" alt="Perfil backend de Emilio Araya: retrato en puntos y profile.yaml">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.v6.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.v6.svg">
+    <img src="assets/banner-light.v6.svg" width="960" alt="Perfil backend de Emilio Araya: retrato en puntos y profile.yaml">
   </picture>
 </a>
 
