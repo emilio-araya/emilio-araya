@@ -47,7 +47,7 @@ También: [Riego automático con Arduino](https://github.com/emilio-araya/riego-
 
 <div align="center">
 
-## `$ cat tech-stack.yaml`
+## ``
 
 <table border="1" cellpadding="14">
   <thead>
