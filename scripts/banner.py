@@ -33,7 +33,7 @@ ASSETS = ROOT / "assets"
 
 # Bump on every visual change: GitHub and browsers cache images by URL,
 # so a new file name is what makes the profile show the new banner.
-BANNER_VERSION = 2
+BANNER_VERSION = 3
 
 W, H = 1180, 610
 MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
@@ -106,7 +106,7 @@ def portrait_cells(theme: str) -> np.ndarray:
     gray = ImageEnhance.Contrast(gray).enhance(1.3)
     if theme == "dark":
         # Lit cells carry the image on dark: pull midtones down so skin is not a solid block.
-        gray = gray.point(lambda v: round(255 * (v / 255) ** 1.25))
+        gray = gray.point(lambda v: round(255 * (v / 255) ** 1.6))
     gray = gray.filter(ImageFilter.UnsharpMask(radius=2, percent=170, threshold=1))
     white = floyd_steinberg(np.asarray(gray))
     cells = white if theme == "dark" else ~white
