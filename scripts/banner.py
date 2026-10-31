@@ -24,7 +24,7 @@ from html import escape
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageEnhance, ImageFilter, ImageOps
+from PIL import Image, ImageFilter, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 PORTRAIT = ROOT / "assets/source/portrait.png"
@@ -33,7 +33,7 @@ ASSETS = ROOT / "assets"
 
 # Bump on every visual change: GitHub and browsers cache images by URL,
 # so a new file name is what makes the profile show the new banner.
-BANNER_VERSION = 4
+BANNER_VERSION = 5
 
 W, H = 1180, 610
 MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
@@ -101,16 +101,17 @@ def portrait_cells(theme: str) -> np.ndarray:
     alpha = np.asarray(source.getchannel("A"), dtype=np.float32) / 255.0
     backdrop = Image.new("RGBA", source.size, "black" if theme == "dark" else "white")
     backdrop.alpha_composite(source)
+    subject = alpha > 0.1
     gray = ImageOps.grayscale(backdrop.convert("RGB"))
-    gray = ImageOps.autocontrast(gray, cutoff=1)
-    gray = ImageEnhance.Contrast(gray).enhance(1.3)
+    # Equalize over the subject only: flat webcam lighting otherwise dithers the face to one tone.
+    gray = ImageOps.equalize(gray, mask=Image.fromarray((subject * 255).astype("uint8")))
     if theme == "dark":
         # Lit cells carry the image on dark: pull midtones down so skin is not a solid block.
-        gray = gray.point(lambda v: round(255 * (v / 255) ** 1.6))
+        gray = gray.point(lambda v: round(255 * (v / 255) ** 1.3))
     gray = gray.filter(ImageFilter.UnsharpMask(radius=2, percent=170, threshold=1))
     white = floyd_steinberg(np.asarray(gray))
     cells = white if theme == "dark" else ~white
-    return cells & (alpha > 0.1)
+    return cells & subject
 
 
 def cells_path(cells: np.ndarray) -> str:
