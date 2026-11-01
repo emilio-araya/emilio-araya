@@ -14,7 +14,7 @@
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&amp;weight=700&amp;size=24&amp;duration=2600&amp;pause=900&amp;color=6DB33F&amp;center=true&amp;vCenter=true&amp;width=900&amp;lines=Emilio+Araya+%E2%80%94+Backend+Developer%3BJava+%7C+Spring+Boot+%7C+Spring+Security%3BAWS+%E2%80%A2+Terraform+%E2%80%A2+Docker%3BConcurrencia+%C2%B7+Consistencia+%C2%B7+Infra+reproducible" alt="Texto animado: Emilio Araya, Backend Developer">
 </a>
 
-<img src="https://komarev.com/ghpvc/?username=emilio-araya&style=flat&color=6db33f&label=profile+views" alt="Visitas al perfil">
+
 
 </div>
 
