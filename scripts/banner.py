@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the animated profile banner (dark and light) with a dithered portrait.
+"""Render the animated profile banner (dark and light) with a full-color portrait.
 
 Run from the repository root:
 
@@ -13,14 +13,16 @@ Outputs:
     assets/banner-dark.vN.svg, assets/banner-light.vN.svg (N = BANNER_VERSION; update README.md)
 
 Inputs:
-    assets/source/portrait.png  photo with a transparent background (optional)
+    assets/source/portrait.jpg  portrait image (optional)
 
-The portrait is converted to a 1-bit Floyd-Steinberg dither and drawn as a single
-SVG path, revealed by a scanline. Without a portrait, the initials are drawn instead. The YAML rows then appear one by one.
+The portrait is cropped to fill the frame and embedded in full color as a base64 JPEG,
+revealed by a scanline. Without a portrait, the initials are dithered instead. The YAML rows then appear one by one.
 """
 
 from __future__ import annotations
 
+import base64
+import io
 import json
 from html import escape
 from pathlib import Path
@@ -29,14 +31,14 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
-PORTRAIT = ROOT / "assets/source/portrait.png"
+PORTRAIT = ROOT / "assets/source/portrait.jpg"
 MONOGRAM = "EA"
 PROFILE = ROOT / "data/profile.json"
 ASSETS = ROOT / "assets"
 
 # Bump on every visual change: GitHub and browsers cache images by URL,
 # so a new file name is what makes the profile show the new banner.
-BANNER_VERSION = 8
+BANNER_VERSION = 9
 
 W, H = 1180, 610
 MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
@@ -98,23 +100,16 @@ def floyd_steinberg(gray: np.ndarray) -> np.ndarray:
     return out
 
 
-def portrait_cells(theme: str) -> np.ndarray:
-    """Boolean grid of cells to draw: light areas on dark, dark areas on light."""
-    source = Image.open(PORTRAIT).convert("RGBA").resize((GRID_W, GRID_H), Image.Resampling.LANCZOS)
-    alpha = np.asarray(source.getchannel("A"), dtype=np.float32) / 255.0
-    subject = alpha > 0.1
-    backdrop = Image.new("RGBA", source.size, "black" if theme == "dark" else "white")
-    backdrop.alpha_composite(source)
-    gray = ImageOps.grayscale(backdrop.convert("RGB"))
-    # Equalize over the subject only, so the background never steals contrast from the face.
-    gray = ImageOps.equalize(gray, mask=Image.fromarray((subject * 255).astype("uint8")))
-    if theme == "dark":
-        # Lit cells carry the image on dark: pull midtones down so skin is not a solid block.
-        gray = gray.point(lambda v: round(255 * (v / 255) ** 1.1))
-    gray = gray.filter(ImageFilter.UnsharpMask(radius=2, percent=170, threshold=1))
-    white = floyd_steinberg(np.asarray(gray))
-    cells = white if theme == "dark" else ~white
-    return cells & subject
+def portrait_image(x: float, y: float, w: float, h: float) -> str:
+    """The portrait cropped to fill the w x h box, as an embedded JPEG at 2x density."""
+    size = (round(w * 2), round(h * 2))
+    source = ImageOps.fit(Image.open(PORTRAIT).convert("RGB"), size, Image.Resampling.LANCZOS,
+                          centering=(0.5, 0.3))
+    buffer = io.BytesIO()
+    source.save(buffer, "JPEG", quality=82, optimize=True, progressive=True)
+    data = base64.b64encode(buffer.getvalue()).decode("ascii")
+    return (f'<image x="{x:g}" y="{y:g}" width="{w:g}" height="{h:g}" '
+            f'preserveAspectRatio="xMidYMid slice" href="data:image/jpeg;base64,{data}"/>')
 
 
 def monogram_cells(theme: str) -> np.ndarray:
@@ -205,14 +200,23 @@ def command_frame(c: dict) -> str:
 def render(theme: str, profile: dict) -> str:
     c = THEMES[theme]
     rows = profile["yaml"]
-    grid_w, grid_h = GRID_W * CELL, GRID_H * CELL
-    px = FRAME_X + (FRAME_W - grid_w) / 2
-    py = FRAME_Y + (FRAME_H - grid_h) / 2
+    if PORTRAIT.exists():
+        # The photo fills the inner frame, one pixel inside its border.
+        px, py = FRAME_X + FRAME_BAND + 1, FRAME_Y + FRAME_BAND + 1
+        grid_w, grid_h = FRAME_W - 2 * FRAME_BAND - 2, FRAME_H - 2 * FRAME_BAND - 2
+        picture = portrait_image(px, py, grid_w, grid_h)
+    else:
+        grid_w, grid_h = GRID_W * CELL, GRID_H * CELL
+        px = FRAME_X + (FRAME_W - grid_w) / 2
+        py = FRAME_Y + (FRAME_H - grid_h) / 2
+        picture = (f'<path transform="translate({px:g} {py + 0.4 * CELL:g}) scale({CELL})" '
+                   f'd="{cells_path(monogram_cells(theme))}" fill="none" stroke="{c["ink"]}" '
+                   f'stroke-width=".8"/>')
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
         f'role="img" aria-labelledby="title desc">',
         f'<title id="title">{escape(profile["name"])} — {escape(profile["role"])}</title>',
-        '<desc id="desc">Animated terminal banner with a dithered portrait and a YAML profile.</desc>',
+        '<desc id="desc">Animated terminal banner with a portrait and a YAML profile.</desc>',
         f'<defs><clipPath id="reveal"><rect x="{px:g}" y="{py:g}" width="{grid_w:g}" height="0">'
         f'<animate attributeName="height" from="0" to="{grid_h:g}" dur="{REVEAL_SECONDS}s" '
         f'fill="freeze"/></rect></clipPath>'
@@ -230,17 +234,16 @@ def render(theme: str, profile: dict) -> str:
         f'<rect x="35" y="88" width="418" height="472" rx="6" fill="{c["panel2"]}" stroke="{c["line"]}"/>',
         f'<path d="M35 124H453" stroke="{c["line"]}"/>',
         text(49, 111, "~/me.jpg" if PORTRAIT.exists() else "~/.signature", c["chrome"], 13, "700", extra=' letter-spacing="1.2"'),
-        text(438, 111, f"{GRID_W}×{GRID_H} · 1-bit · {len(FRAME_COMMANDS)} ttys", c["muted"], 11, anchor="end"),
+        text(438, 111, (f"{grid_w:g}×{grid_h:g} · rgb" if PORTRAIT.exists() else f"{GRID_W}×{GRID_H} · 1-bit")
+             + f" · {len(FRAME_COMMANDS)} ttys", c["muted"], 11, anchor="end"),
         command_frame(c),
-        f'<g clip-path="url(#reveal)"><path transform="translate({px:g} {py + 0.4 * CELL:g}) '
-        f'scale({CELL})" d="{cells_path(portrait_cells(theme) if PORTRAIT.exists() else monogram_cells(theme))}" fill="none" stroke="{c["ink"]}" '
-        f'stroke-width=".8"/></g>',
+        f'<g clip-path="url(#reveal)">{picture}</g>',
         # Scanline: sweeps once with the reveal, then idles as a faint periodic sweep.
         f'<rect x="{px:g}" y="{py:g}" width="{grid_w:g}" height="18" fill="url(#scan)" opacity="0">'
         f'<animate attributeName="y" values="{py - 18:g};{py + grid_h - 18:g}" dur="{REVEAL_SECONDS}s" '
         f'fill="freeze"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;.9;1" '
         f'dur="{REVEAL_SECONDS}s" fill="freeze"/></rect>',
-        text(49, 553, "$ magick me.jpg -dither FloydSteinberg -monochrome me.svg" if PORTRAIT.exists()
+        text(49, 553, "$ feh --zoom fill ~/me.jpg" if PORTRAIT.exists()
              else f"$ figlet -f banner {MONOGRAM} | tee ~/.signature", c["muted"], 10),
     ]
 
